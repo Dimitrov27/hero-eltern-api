@@ -32,7 +32,7 @@
     document.getElementById("sos-error").style.display = "none";
 
     try {
-      const res = await fetch("https://wondrous-sprinkles-1aa21b.netlify.app/.netlify/functions/sos", {
+      const res = await fetch("https://hero-eltern-api.pages.dev/sos, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
