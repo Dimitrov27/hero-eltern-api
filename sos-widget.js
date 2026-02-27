@@ -32,8 +32,7 @@
     document.getElementById("sos-error").style.display = "none";
 
     try {
-      const res = await fetch("https://hero-eltern-api.pages.dev/sos, {
-        method: "POST",
+     const res = await fetch("https://hero-eltern-api.pages.dev/sos", {        method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
       });
