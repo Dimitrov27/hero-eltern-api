@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danke – HERO Eltern</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1A1612;
+      color: #FAF6F0;
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+    .container {
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .line { width: 40px; height: 2px; background: #C8432A; margin: 0 auto 24px; }
+    .label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #8B6F5E;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: #FAF6F0;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    h1 em { color: #C8432A; font-style: italic; }
+    .subtitle {
+      font-size: 16px;
+      color: #8B7B70;
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 48px;
+    }
+    .box {
+      background: #221E1A;
+      border: 1px solid #2A2420;
+      border-radius: 4px;
+      padding: 32px 24px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+    .box-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #C8432A;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      background: #C8432A;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 2px;
+    }
+    .step-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: #C8C0B8;
+      line-height: 1.6;
+    }
+    .step-text strong { color: #FAF6F0; font-style: italic; }
+    .cta-link {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #C8432A;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s;
+    }
+    .cta-link:hover { background: #A8341F; }
+    .footer {
+      margin-top: 40px;
+      font-size: 11px;
+      color: #3A3028;
+    }
+    .footer a { color: #3A3028; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="line"></div>
+    <div class="label">HERO Eltern</div>
+    <h1>Du bist dabei.<br><em>Danke.</em></h1>
+    <p class="subtitle">
+      Du gehörst zu den ersten Eltern, die HERO Eltern kennenlernen.<br>
+      Schau in dein Postfach — dort wartet etwas auf dich.
+    </p>
+
+    <div class="box">
+      <div class="box-label">Was jetzt passiert</div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Postfach öffnen</strong> — du hast gerade eine E-Mail erhalten.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Kostenlose Vorschau lesen</strong> — 5 Seiten, direkt anwendbar.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Morgen früh</strong> einen der 3 Sätze ausprobieren.</div>
+      </div>
+    </div>
+
+    <a href="https://hero-eltern.de" class="cta-link">Zurück zur Website →</a>
+
+    <div class="footer">
+      <p>© 2026 HERO Eltern · <a href="https://hero-eltern.de/impressum">Impressum</a></p>
+    </div>
+  </div>
+</body>
+</html>
