@@ -21,7 +21,7 @@ export async function onRequestPost(context) {
       body: JSON.stringify({
         email,
         includeListIds: [5],
-        templateId: 3,
+        templateId: 1,
         redirectionUrl: "https://hero-eltern-api.pages.dev/danke",
       }),
     });
