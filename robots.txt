@@ -20,3 +20,5 @@ User-agent: CCBot
 Disallow: /
 
 Sitemap: https://www.hero-eltern.de/sitemap.xml
+# AI Search Index
+LLMs-txt: https://raw.githubusercontent.com/Dimitrov27/hero-eltern-api/main/llms.txt
