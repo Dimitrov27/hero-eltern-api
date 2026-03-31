@@ -3,6 +3,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Familienkompass – HERO Eltern</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,13 +23,18 @@
 –yellow: #B5833A;
 }
 
+:root, html, body {
+color-scheme: light !important;
+}
+
 body {
 background: var(–dark);
-color: var(–white);
+color: #FFFFFF !important;
 font-family: ‘Inter’, sans-serif;
 font-weight: 400;
 line-height: 1.6;
 min-height: 100vh;
+-webkit-text-size-adjust: 100%;
 }
 
 .quiz-wrap {
@@ -65,7 +71,7 @@ display: flex;
 align-items: center;
 gap: 10px;
 }
-.hero-label::before { content: ‘’; width: 24px; height: 1px; background: var(–red); }
+.hero-label::before { content: ‘’; width: 24px; height: 1px; background: #C8432A !important; }
 
 .hero-title {
 font-family: ‘Manrope’, sans-serif;
@@ -73,7 +79,7 @@ font-size: clamp(2rem, 7vw, 3.2rem);
 font-weight: 800;
 line-height: 1.05;
 letter-spacing: -0.04em;
-color: var(–white);
+color: #FFFFFF !important;
 margin-bottom: 20px;
 }
 .hero-title em { font-style: italic; color: var(–red); font-weight: 800; }
@@ -113,7 +119,7 @@ font-family: ‘Manrope’, sans-serif;
 font-size: clamp(1.4rem, 4.5vw, 2rem);
 font-weight: 800;
 letter-spacing: -0.03em;
-color: var(–white);
+color: #FFFFFF !important;
 line-height: 1.15;
 margin-bottom: 32px;
 }
@@ -148,14 +154,14 @@ color: var(–muted);
 transition: all 0.25s ease;
 flex-shrink: 0;
 }
-.opt.selected .opt-letter { background: var(–red); border-color: var(–red); color: var(–white); }
+.opt.selected .opt-letter { background: #C8432A !important; border-color: var(–red); color: #FFFFFF !important; }
 
 .btn-primary {
 display: inline-flex;
 align-items: center;
 gap: 10px;
-background: var(–red);
-color: var(–white);
+background: #C8432A !important;
+color: #FFFFFF !important;
 border: none;
 padding: 16px 32px;
 font-family: ‘Manrope’, sans-serif;
@@ -205,14 +211,14 @@ font-family: ‘Manrope’, sans-serif;
 .result-archetype.yellow { color: #D4A84B; }
 .result-archetype.yellow::before { background: #D4A84B; }
 .result-archetype.red { color: var(–red); }
-.result-archetype.red::before { background: var(–red); }
+.result-archetype.red::before { background: #C8432A !important; }
 
 .result-title {
 font-family: ‘Manrope’, sans-serif;
 font-size: clamp(1.6rem, 5vw, 2.6rem);
 font-weight: 800;
 letter-spacing: -0.04em;
-color: var(–white);
+color: #FFFFFF !important;
 line-height: 1.1;
 margin-bottom: 28px;
 }
@@ -232,11 +238,11 @@ color: rgba(255,255,255,0.84);
 line-height: 1.65;
 }
 .result-next strong {
-color: var(–white); display: block; margin-bottom: 4px;
+color: #FFFFFF !important; display: block; margin-bottom: 4px;
 font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
 font-family: ‘Manrope’, sans-serif;
 }
-.result-next .inline-bold { display: inline; font-size: inherit; letter-spacing: normal; text-transform: none; font-weight: 700; color: var(–white); }
+.result-next .inline-bold { display: inline; font-size: inherit; letter-spacing: normal; text-transform: none; font-weight: 700; color: #FFFFFF !important; }
 
 .cta-wrap { margin-top: 36px; display: flex; flex-direction: column; gap: 12px; }
 
@@ -260,7 +266,7 @@ font-family: ‘Inter’, sans-serif;
 
 .result-bq { border-left: 2px solid var(–red); padding: 4px 0 4px 20px; margin: 10px 0; }
 .result-bq p { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.84); font-family: ‘Inter’, sans-serif; }
-.result-bq p strong { color: var(–white); font-weight: 700; }
+.result-bq p strong { color: #FFFFFF !important; font-weight: 700; }
 
 .vip-card {
 margin-top: 16px;
@@ -271,7 +277,7 @@ padding: 22px 22px 20px;
 }
 .vip-card-label { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(–red); margin-bottom: 10px; font-family: ‘Manrope’, sans-serif; }
 .vip-card p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.84); margin-bottom: 14px; font-family: ‘Inter’, sans-serif; }
-.vip-price { font-family: ‘Manrope’, sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.04em; color: var(–white); margin-bottom: 4px; }
+.vip-price { font-family: ‘Manrope’, sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF !important; margin-bottom: 4px; }
 .vip-price span { font-size: 14px; font-family: ‘Inter’, sans-serif; color: rgba(255,255,255,0.6); font-weight: 400; }
 
 .bridge-para { margin: 28px 0 20px; font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.6); font-style: italic; text-align: center; padding: 0 8px; font-family: ‘Inter’, sans-serif; }
@@ -292,7 +298,7 @@ font-family: ‘Inter’, sans-serif;
 
 .btn-program {
 display: flex; align-items: center; justify-content: center; gap: 10px;
-background: var(–red); color: var(–white); border: none;
+background: #C8432A !important; color: #FFFFFF !important; border: none;
 padding: 18px 28px;
 font-family: ‘Manrope’, sans-serif; font-size: 15px; font-weight: 800;
 border-radius: 12px; cursor: pointer; text-decoration: none;
@@ -309,11 +315,11 @@ background: rgba(200,67,42,0.05); display: flex; align-items: center; gap: 14px;
 }
 .timer-icon { font-size: 20px; flex-shrink: 0; }
 .timer-text { flex: 1; font-size: 13px; color: rgba(255,255,255,0.76); line-height: 1.5; font-family: ‘Inter’, sans-serif; }
-.timer-text strong { color: var(–white); }
+.timer-text strong { color: #FFFFFF !important; }
 .timer-count {
 font-family: ‘Manrope’, sans-serif; font-size: 26px; font-weight: 800;
 letter-spacing: -0.03em;
-color: var(–white); flex-shrink: 0; min-width: 56px; text-align: right;
+color: #FFFFFF !important; flex-shrink: 0; min-width: 56px; text-align: right;
 }
 .timer-expired { font-size: 12px; color: var(–muted); text-align: center; padding: 12px 0 4px; font-style: italic; font-family: ‘Inter’, sans-serif; }
 
@@ -321,7 +327,7 @@ color: var(–white); flex-shrink: 0; min-width: 56px; text-align: right;
 .score-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.1); }
 .score-dot.a { background: #4CAF80; }
 .score-dot.b { background: #D4A84B; }
-.score-dot.c { background: var(–red); }
+.score-dot.c { background: #C8432A !important; }
 
 @media (max-width: 480px) {
 .quiz-wrap { padding: 32px 18px 120px; }
