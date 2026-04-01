@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -11,32 +10,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-–dark: #1A1612;
-–red: #C8432A;
-–cream: #FAF6F0;
-–white: #FFFFFF;
-–muted: #8C7B6B;
-–border: rgba(200,67,42,0.15);
-–green: #2D6A4F;
-–yellow: #B5833A;
+--dark: #1A1612;
+--red: #C8432A;
+--cream: #FAF6F0;
+--white: #FFFFFF;
+--muted: #8C7B6B;
+--border: rgba(200,67,42,0.15);
+--green: #2D6A4F;
+--yellow: #B5833A;
 }
-
-:root, html, body {
-color-scheme: light !important;
-}
-
+:root, html, body { color-scheme: light !important; }
 body {
-background: var(–dark);
+background: var(--dark);
 color: #FFFFFF !important;
-font-family: ‘Inter’, sans-serif;
+font-family: 'Inter', sans-serif;
 font-weight: 400;
 line-height: 1.6;
 min-height: 100vh;
 -webkit-text-size-adjust: 100%;
 }
-
 .quiz-wrap {
 max-width: 680px;
 margin: 0 auto;
@@ -45,36 +38,31 @@ background: #1A1612;
 min-height: 100vh;
 border-radius: 20px;
 }
-
 .screen { display: none; }
 .screen.active { display: block; animation: fadeUp 0.5s ease both; }
-
 @keyframes fadeUp {
 from { opacity: 0; transform: translateY(18px); }
 to   { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes pulse {
 0%, 100% { opacity: 1; }
 50% { opacity: 0.5; }
 }
-
 .hero-label {
-font-family: ‘Manrope’, sans-serif;
+font-family: 'Manrope', sans-serif;
 font-size: 11px;
 font-weight: 800;
 letter-spacing: 0.16em;
 text-transform: uppercase;
-color: var(–red);
+color: var(--red);
 margin-bottom: 24px;
 display: flex;
 align-items: center;
 gap: 10px;
 }
-.hero-label::before { content: ‘’; width: 24px; height: 1px; background: #C8432A !important; }
-
+.hero-label::before { content: ''; width: 24px; height: 1px; background: #C8432A !important; }
 .hero-title {
-font-family: ‘Manrope’, sans-serif;
+font-family: 'Manrope', sans-serif;
 font-size: clamp(2rem, 7vw, 3.2rem);
 font-weight: 800;
 line-height: 1.05;
@@ -82,8 +70,7 @@ letter-spacing: -0.04em;
 color: #FFFFFF !important;
 margin-bottom: 20px;
 }
-.hero-title em { font-style: italic; color: var(–red); font-weight: 800; }
-
+.hero-title em { font-style: italic; color: var(--red); font-weight: 800; }
 .hero-sub {
 font-size: 15px;
 color: rgba(255,255,255,0.76);
@@ -91,9 +78,7 @@ line-height: 1.78;
 margin-bottom: 40px;
 max-width: 520px;
 }
-
 .compass-icon { width: 72px; height: 72px; margin-bottom: 32px; opacity: 0.9; }
-
 .progress-wrap { margin-bottom: 36px; }
 .progress-info {
 display: flex;
@@ -107,15 +92,13 @@ letter-spacing: 0.05em;
 .progress-bar { height: 2px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
 .progress-fill {
 height: 100%;
-background: linear-gradient(90deg, var(–red), #E8634A);
+background: linear-gradient(90deg, var(--red), #E8634A);
 border-radius: 2px;
 transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
 }
-
-.q-tag { font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(–red); margin-bottom: 14px; opacity: 0.8; }
-
+.q-tag { font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; opacity: 0.8; }
 .q-text {
-font-family: ‘Manrope’, sans-serif;
+font-family: 'Manrope', sans-serif;
 font-size: clamp(1.4rem, 4.5vw, 2rem);
 font-weight: 800;
 letter-spacing: -0.03em;
@@ -123,9 +106,7 @@ color: #FFFFFF !important;
 line-height: 1.15;
 margin-bottom: 32px;
 }
-
 .options { display: flex; flex-direction: column; gap: 12px; }
-
 .opt {
 position: relative;
 padding: 18px 22px 18px 52px;
@@ -135,12 +116,12 @@ cursor: pointer;
 transition: all 0.25s ease;
 background: rgba(255,255,255,0.02);
 font-size: 14px;
-font-family: ‘Inter’, sans-serif;
+font-family: 'Inter', sans-serif;
 color: rgba(255,255,255,0.84);
 line-height: 1.55;
 }
 .opt:hover { border-color: rgba(200,67,42,0.4); background: rgba(200,67,42,0.06); }
-.opt.selected { border-color: var(–red); background: rgba(200,67,42,0.1); }
+.opt.selected { border-color: var(--red); background: rgba(200,67,42,0.1); }
 .opt-letter {
 position: absolute;
 left: 18px; top: 50%;
@@ -150,12 +131,11 @@ border-radius: 50%;
 border: 1px solid rgba(255,255,255,0.2);
 display: flex; align-items: center; justify-content: center;
 font-size: 11px; font-weight: 700;
-color: var(–muted);
+color: var(--muted);
 transition: all 0.25s ease;
 flex-shrink: 0;
 }
-.opt.selected .opt-letter { background: #C8432A !important; border-color: var(–red); color: #FFFFFF !important; }
-
+.opt.selected .opt-letter { background: #C8432A !important; border-color: var(--red); color: #FFFFFF !important; }
 .btn-primary {
 display: inline-flex;
 align-items: center;
@@ -164,7 +144,7 @@ background: #C8432A !important;
 color: #FFFFFF !important;
 border: none;
 padding: 16px 32px;
-font-family: ‘Manrope’, sans-serif;
+font-family: 'Manrope', sans-serif;
 font-size: 15px;
 font-weight: 800;
 letter-spacing: -0.01em;
@@ -175,14 +155,11 @@ text-decoration: none;
 box-shadow: 0 14px 28px rgba(200,67,42,0.22);
 }
 .btn-primary:hover { background: #A93620; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,67,42,0.35); }
-
 .btn-next { margin-top: 28px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
 .btn-next.visible { opacity: 1; pointer-events: auto; }
-
 .intro-details { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
-.intro-detail { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.76); font-family: ‘Inter’, sans-serif; }
+.intro-detail { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.76); font-family: 'Inter', sans-serif; }
 .intro-detail svg { opacity: 0.7; }
-
 .age-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
 .age-opt {
 padding: 14px 16px;
@@ -190,7 +167,7 @@ border: 1px solid rgba(255,255,255,0.08);
 border-radius: 4px;
 cursor: pointer;
 font-size: 13px;
-font-family: ‘Inter’, sans-serif;
+font-family: 'Inter', sans-serif;
 color: rgba(255,255,255,0.84);
 transition: all 0.2s ease;
 background: rgba(255,255,255,0.02);
@@ -198,23 +175,21 @@ text-align: center;
 font-weight: 500;
 }
 .age-opt:hover { border-color: rgba(200,67,42,0.3); background: rgba(200,67,42,0.05); }
-.age-opt.selected { border-color: var(–red); background: rgba(200,67,42,0.1); }
-
+.age-opt.selected { border-color: var(--red); background: rgba(200,67,42,0.1); }
 .result-archetype {
 font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
 margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
-font-family: ‘Manrope’, sans-serif;
+font-family: 'Manrope', sans-serif;
 }
-.result-archetype::before { content: ‘’; width: 24px; height: 1px; }
+.result-archetype::before { content: ''; width: 24px; height: 1px; }
 .result-archetype.green { color: #4CAF80; }
 .result-archetype.green::before { background: #4CAF80; }
 .result-archetype.yellow { color: #D4A84B; }
 .result-archetype.yellow::before { background: #D4A84B; }
-.result-archetype.red { color: var(–red); }
+.result-archetype.red { color: var(--red); }
 .result-archetype.red::before { background: #C8432A !important; }
-
 .result-title {
-font-family: ‘Manrope’, sans-serif;
+font-family: 'Manrope', sans-serif;
 font-size: clamp(1.6rem, 5vw, 2.6rem);
 font-weight: 800;
 letter-spacing: -0.04em;
@@ -222,10 +197,8 @@ color: #FFFFFF !important;
 line-height: 1.1;
 margin-bottom: 28px;
 }
-
-.result-warning { border-left: 2px solid var(–red); padding-left: 18px; margin: 28px 0; }
-.result-warning p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.76); font-style: italic; font-family: ‘Inter’, sans-serif; }
-
+.result-warning { border-left: 2px solid var(--red); padding-left: 18px; margin: 28px 0; }
+.result-warning p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.76); font-style: italic; font-family: 'Inter', sans-serif; }
 .result-next {
 background: rgba(255,255,255,0.03);
 border: 1px solid rgba(255,255,255,0.07);
@@ -233,41 +206,26 @@ border-radius: 4px;
 padding: 20px 22px;
 margin: 28px 0;
 font-size: 14px;
-font-family: ‘Inter’, sans-serif;
+font-family: 'Inter', sans-serif;
 color: rgba(255,255,255,0.84);
 line-height: 1.65;
 }
 .result-next strong {
 color: #FFFFFF !important; display: block; margin-bottom: 4px;
 font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
-font-family: ‘Manrope’, sans-serif;
+font-family: 'Manrope', sans-serif;
 }
 .result-next .inline-bold { display: inline; font-size: inherit; letter-spacing: normal; text-transform: none; font-weight: 700; color: #FFFFFF !important; }
-
 .cta-wrap { margin-top: 36px; display: flex; flex-direction: column; gap: 12px; }
-
-.wa-btn {
-display: flex; align-items: center; justify-content: center; gap: 12px;
-background: #25D366; color: #FFFFFF; border: none;
-padding: 18px 32px;
-font-family: ‘Manrope’, sans-serif; font-size: 15px; font-weight: 800;
-border-radius: 12px; cursor: pointer; text-decoration: none;
-transition: all 0.2s ease; letter-spacing: -0.01em;
-}
-.wa-btn:hover { background: #20BC5A; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(37,211,102,0.3); }
-.wa-icon { width: 22px; height: 22px; flex-shrink: 0; }
-
 .result-footer {
 margin-top: 48px; padding-top: 28px;
 border-top: 1px solid rgba(255,255,255,0.06);
 font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6;
-font-family: ‘Inter’, sans-serif;
+font-family: 'Inter', sans-serif;
 }
-
-.result-bq { border-left: 2px solid var(–red); padding: 4px 0 4px 20px; margin: 10px 0; }
-.result-bq p { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.84); font-family: ‘Inter’, sans-serif; }
+.result-bq { border-left: 2px solid var(--red); padding: 4px 0 4px 20px; margin: 10px 0; }
+.result-bq p { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.84); font-family: 'Inter', sans-serif; }
 .result-bq p strong { color: #FFFFFF !important; font-weight: 700; }
-
 .vip-card {
 margin-top: 16px;
 background: rgba(200,67,42,0.07);
@@ -275,73 +233,62 @@ border: 1px solid rgba(200,67,42,0.25);
 border-radius: 4px;
 padding: 22px 22px 20px;
 }
-.vip-card-label { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(–red); margin-bottom: 10px; font-family: ‘Manrope’, sans-serif; }
-.vip-card p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.84); margin-bottom: 14px; font-family: ‘Inter’, sans-serif; }
-.vip-price { font-family: ‘Manrope’, sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF !important; margin-bottom: 4px; }
-.vip-price span { font-size: 14px; font-family: ‘Inter’, sans-serif; color: rgba(255,255,255,0.6); font-weight: 400; }
-
-.bridge-para { margin: 28px 0 20px; font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.6); font-style: italic; text-align: center; padding: 0 8px; font-family: ‘Inter’, sans-serif; }
-
+.vip-card-label { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; font-family: 'Manrope', sans-serif; }
+.vip-card p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.84); margin-bottom: 14px; font-family: 'Inter', sans-serif; }
+.vip-price { font-family: 'Manrope', sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF !important; margin-bottom: 4px; }
+.vip-price span { font-size: 14px; font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.6); font-weight: 400; }
+.bridge-para { margin: 28px 0 20px; font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.6); font-style: italic; text-align: center; padding: 0 8px; font-family: 'Inter', sans-serif; }
 .cta-divider {
 display: flex; align-items: center; gap: 12px; margin: 8px 0;
 color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-font-family: ‘Manrope’, sans-serif; font-weight: 700;
+font-family: 'Manrope', sans-serif; font-weight: 700;
 }
-.cta-divider::before, .cta-divider::after { content: ‘’; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
-
+.cta-divider::before, .cta-divider::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
 .program-bridge {
 margin: 32px 0 16px; padding: 20px 22px;
 background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07);
 border-radius: 4px; font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.84);
-font-family: ‘Inter’, sans-serif;
+font-family: 'Inter', sans-serif;
 }
-
 .btn-program {
 display: flex; align-items: center; justify-content: center; gap: 10px;
 background: #C8432A !important; color: #FFFFFF !important; border: none;
 padding: 18px 28px;
-font-family: ‘Manrope’, sans-serif; font-size: 15px; font-weight: 800;
+font-family: 'Manrope', sans-serif; font-size: 15px; font-weight: 800;
 border-radius: 12px; cursor: pointer; text-decoration: none;
 transition: all 0.2s ease; letter-spacing: -0.01em;
 box-shadow: 0 14px 28px rgba(200,67,42,0.22);
 }
 .btn-program:hover { background: #A93620; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,67,42,0.35); }
-.btn-program-sub { text-align: center; font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 8px; letter-spacing: 0.04em; font-family: ‘Inter’, sans-serif; }
-
+.btn-program-sub { text-align: center; font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 8px; letter-spacing: 0.04em; font-family: 'Inter', sans-serif; }
 .timer-wrap {
 margin: 28px 0 0; padding: 16px 20px;
 border: 1px solid rgba(200,67,42,0.3); border-radius: 4px;
 background: rgba(200,67,42,0.05); display: flex; align-items: center; gap: 14px;
 }
 .timer-icon { font-size: 20px; flex-shrink: 0; }
-.timer-text { flex: 1; font-size: 13px; color: rgba(255,255,255,0.76); line-height: 1.5; font-family: ‘Inter’, sans-serif; }
+.timer-text { flex: 1; font-size: 13px; color: rgba(255,255,255,0.76); line-height: 1.5; font-family: 'Inter', sans-serif; }
 .timer-text strong { color: #FFFFFF !important; }
 .timer-count {
-font-family: ‘Manrope’, sans-serif; font-size: 26px; font-weight: 800;
+font-family: 'Manrope', sans-serif; font-size: 26px; font-weight: 800;
 letter-spacing: -0.03em;
 color: #FFFFFF !important; flex-shrink: 0; min-width: 56px; text-align: right;
 }
-.timer-expired { font-size: 12px; color: var(–muted); text-align: center; padding: 12px 0 4px; font-style: italic; font-family: ‘Inter’, sans-serif; }
-
+.timer-expired { font-size: 12px; color: var(--muted); text-align: center; padding: 12px 0 4px; font-style: italic; font-family: 'Inter', sans-serif; }
 .score-dots { display: flex; gap: 6px; margin-bottom: 32px; flex-wrap: wrap; }
 .score-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.1); }
 .score-dot.a { background: #4CAF80; }
 .score-dot.b { background: #D4A84B; }
 .score-dot.c { background: #C8432A !important; }
-
 @media (max-width: 480px) {
 .quiz-wrap { padding: 32px 18px 120px; }
 .age-grid { grid-template-columns: 1fr; }
 .intro-details { gap: 14px; }
 }
 </style>
-
 </head>
 <body>
 <div class="quiz-wrap">
-
-  <!-- ══ SCREEN 0: INTRO ══ -->
-
   <div class="screen active" id="s0">
     <svg class="compass-icon" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="36" cy="36" r="33" stroke="#C8432A" stroke-width="1.5" opacity="0.4"/>
@@ -358,37 +305,28 @@ color: #FFFFFF !important; flex-shrink: 0; min-width: 56px; text-align: right;
       <text x="8" y="38.5" text-anchor="middle" fill="#FAF6F0" font-size="7" font-family="Manrope" font-weight="600" opacity="0.4">W</text>
       <text x="64" y="38.5" text-anchor="middle" fill="#FAF6F0" font-size="7" font-family="Manrope" font-weight="600" opacity="0.4">O</text>
     </svg>
-
-
-<div class="hero-label">HERO Eltern · Familienkompass</div>
-<h1 class="hero-title">Wie belastet ist<br>dein <em>Familienalltag</em><br>wirklich?</h1>
-<p class="hero-sub">Der Stresspegel-Check für deinen Elternalltag.<br>6 ehrliche Fragen. Dein persönliches Ergebnis. Keine Vorwürfe.</p>
-
-<div class="intro-details">
-  <div class="intro-detail">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    2 Minuten
+    <div class="hero-label">HERO Eltern · Familienkompass</div>
+    <h1 class="hero-title">Wie belastet ist<br>dein <em>Familienalltag</em><br>wirklich?</h1>
+    <p class="hero-sub">Der Stresspegel-Check für deinen Elternalltag.<br>6 ehrliche Fragen. Dein persönliches Ergebnis. Keine Vorwürfe.</p>
+    <div class="intro-details">
+      <div class="intro-detail">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 Minuten
+      </div>
+      <div class="intro-detail">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Anonym & kostenlos
+      </div>
+      <div class="intro-detail">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Sofortiges Ergebnis
+      </div>
+    </div>
+    <button class="btn-primary" onclick="showAge()">
+      Jetzt starten
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
   </div>
-  <div class="intro-detail">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    Anonym & kostenlos
-  </div>
-  <div class="intro-detail">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-    Sofortiges Ergebnis
-  </div>
-</div>
-
-<button class="btn-primary" onclick="showAge()">
-  Jetzt starten
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-</button>
-
-
-  </div>
-
-  <!-- ══ SCREEN AGE ══ -->
-
   <div class="screen" id="s-age">
     <div class="hero-label">Kurzfrage vorab</div>
     <h2 class="q-text">Wie alt ist dein Kind?<br><span style="font-size:0.75em;opacity:0.6;font-style:italic;font-weight:600">(oder dein jüngstes, wenn du mehrere hast)</span></h2>
@@ -403,9 +341,6 @@ color: #FFFFFF !important; flex-shrink: 0; min-width: 56px; text-align: right;
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </button>
   </div>
-
-  <!-- ══ SCREEN QUESTIONS ══ -->
-
   <div class="screen" id="s-quiz">
     <div class="progress-wrap">
       <div class="progress-info">
@@ -422,18 +357,12 @@ color: #FFFFFF !important; flex-shrink: 0; min-width: 56px; text-align: right;
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </button>
   </div>
-
-  <!-- ══ SCREEN RESULT ══ -->
-
   <div class="screen" id="s-result">
     <div id="result-content"></div>
   </div>
-
 </div>
-
 <script>
 const PHONE = '491757479135';
-
 const QUESTIONS = [
   { tag:'Morgen', text:'Wie startet ihr in den Tag?', opts:[{letter:'A',text:'Meist okay – mit etwas Puffer',val:'a'},{letter:'B',text:'Hektisch, aber wir schaffen es irgendwie',val:'b'},{letter:'C',text:'Chaos. Jeden. Morgen.',val:'c'}] },
   { tag:'Reaktion', text:'Wenn dein Kind nicht hört – was passiert in dir?', opts:[{letter:'A',text:'Ich bleibe meist ruhig',val:'a'},{letter:'B',text:'Ich merke, wie die Stimme lauter wird',val:'b'},{letter:'C',text:'Ich explodiere – und bereue es danach',val:'c'}] },
@@ -442,7 +371,6 @@ const QUESTIONS = [
   { tag:'Mental Load', text:'Wer denkt bei euch an alles – Arzttermine, Geburtstage, saubere Kleidung?', opts:[{letter:'A',text:'Das teilen wir uns gut auf',val:'a'},{letter:'B',text:'Meistens ich – aber es geht noch',val:'b'},{letter:'C',text:'Ich trage das alles alleine. Immer.',val:'c'}] },
   { tag:'Reset', text:'Was machst du, wenn es zu viel wird?', opts:[{letter:'A',text:'Ich habe Wege, die mir wirklich helfen',val:'a'},{letter:'B',text:'Ich versuche es – aber es reicht nicht',val:'b'},{letter:'C',text:'Ich mache einfach weiter, bis ich nicht mehr kann.',val:'c'}] }
 ];
-
 const RESULTS = {
   a: {
     archetype:'Der Fels in der Brandung', archetypeClass:'green', archetypeLabel:'Archetype 1 · Dein Kompass zeigt Nord',
@@ -475,20 +403,15 @@ const RESULTS = {
     trigger:'kompass feuerwehr', showVip:true
   }
 };
-
 let currentQ = 0, answers = [], selectedAge = null;
-
 function showAge() { showScreen('s-age'); }
-
 function selectAge(el, val) {
   document.querySelectorAll('.age-opt').forEach(o => o.classList.remove('selected'));
   el.classList.add('selected');
   selectedAge = val;
   document.getElementById('btn-age-next').classList.add('visible');
 }
-
 function startQuiz() { currentQ = 0; answers = []; showScreen('s-quiz'); renderQuestion(); }
-
 function renderQuestion() {
   const q = QUESTIONS[currentQ];
   document.getElementById('q-label').textContent = `Frage ${currentQ + 1} von ${QUESTIONS.length}`;
@@ -510,36 +433,29 @@ function renderQuestion() {
   const qs = document.getElementById('s-quiz');
   qs.style.animation = 'none'; qs.offsetHeight; qs.style.animation = 'fadeUp 0.4s ease both';
 }
-
 function selectOpt(el, val, idx) {
   document.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
   el.classList.add('selected');
   answers[currentQ] = val;
   document.getElementById('btn-q-next').classList.add('visible');
 }
-
 function nextQuestion() {
   if (answers[currentQ] === undefined) return;
   currentQ++;
   if (currentQ < QUESTIONS.length) { renderQuestion(); } else { showResult(); }
 }
-
 function showResult() {
   const counts = { a:0, b:0, c:0 };
   answers.forEach(a => counts[a]++);
   let type = 'a';
   if (counts.c >= counts.a && counts.c >= counts.b) type = 'c';
   else if (counts.b >= counts.a) type = 'b';
-
   const r = RESULTS[type];
   const waLink = `https://wa.me/${PHONE}?text=${encodeURIComponent(r.trigger)}`;
   const programLink = 'https://www.hero-eltern.de/product/22342836/eltern-reset-30-tage-programm';
-
   const dotHTML = answers.map(a => `<div class="score-dot ${a}"></div>`).join('');
   const bqHTML = r.bqLines.map(line => `<div class="result-bq"><p>${line}</p></div>`).join('');
-
-  const waIcon = `<svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
-  const waMicro = `<p style="text-align:center;font-size:11px;color:rgba(255,255,255,0.3);margin-top:8px;line-height:1.6;font-family:'Inter',sans-serif;">100% kostenlos &amp; unverbindlich · Antwort innerhalb von 24h</p>`;
+  const waIcon = `<svg style="width:18px;height:18px;flex-shrink:0;" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
 
   const vipHTML = r.showVip ? `
     <p class="bridge-para">${r.bridge}</p>
@@ -548,21 +464,18 @@ function showResult() {
       <p>Du bekommst eine persönliche Nachricht von mir via WhatsApp – basierend auf deinem Familienkompass-Ergebnis. Ich erkläre dir, was dein Ergebnis bedeutet und wie du konkret startest. Danach begleitet dich das 30-Tage Programm.</p>
       <p style="font-size:13px;opacity:0.8;">✓ Persönliche Auswertung deines Ergebnisses<br>✓ Individueller Startplan via WhatsApp<br>✓ 30-Tage HERO Eltern Programm inklusive</p>
       <div class="vip-price">97 € <span>einmalig</span></div>
-      <a href="https://www.hero-eltern.de/product/22615549/hero-eltern-vip-setup" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;background:#C8432A;color:#fff;padding:16px 24px;border-radius:12px;font-family:Manrope,sans-serif;font-size:14px;font-weight:800;text-decoration:none;transition:all 0.2s ease;letter-spacing:-0.01em;">
+      <a href="https://www.hero-eltern.de/product/22615549/hero-eltern-vip-setup" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);padding:14px 24px;border-radius:12px;font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;text-decoration:none;transition:all 0.2s ease;letter-spacing:-0.01em;">
         VIP Setup jetzt kaufen – 97 €
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
-    <div class="cta-divider" style="margin:28px 0">oder</div>
-    <div class="cta-wrap" style="margin-top:0">
-      <a href="${waLink}" class="wa-btn" target="_blank" rel="noopener">${waIcon} Kostenlose Auswertung anfragen</a>
-      ${waMicro}
+    <div style="text-align:center;margin-top:20px;">
+      <a href="${waLink}" target="_blank" rel="noopener" style="font-size:13px;color:rgba(255,255,255,0.4);text-decoration:underline;font-family:'Inter',sans-serif;">${waIcon} Kostenlose Auswertung anfragen</a>
     </div>
   ` : `
     <p class="bridge-para">${r.bridge}</p>
     <div class="cta-wrap" style="margin-top:12px">
-      <a href="${waLink}" class="wa-btn" target="_blank" rel="noopener">${waIcon} ${r.ctaText}</a>
-      ${waMicro}
+      <a href="${waLink}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 24px;border-radius:12px;background:#25D366;color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:800;text-decoration:none;letter-spacing:-0.01em;">${waIcon} ${r.ctaText}</a>
     </div>
   `;
 
@@ -584,7 +497,7 @@ function showResult() {
     </div>
     <div class="cta-wrap" style="margin-top:16px">
       <a href="${programLink}" class="btn-program" target="_blank" rel="noopener">
-        Jetzt HERO Eltern starten – 67 €
+        Meinen Reset starten – 67 €
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
       <div class="btn-program-sub">30 Tage · 5 Min täglich · direkt via WhatsApp · Kein Abo</div>
@@ -594,14 +507,11 @@ function showResult() {
       <p>Von Eltern für Eltern · HERO Eltern ist kein therapeutisches Angebot.<br>Bei ernsthaften Anzeichen von Burnout wende dich bitte an einen Arzt oder eine Beratungsstelle.</p>
     </div>
   `;
-
   document.getElementById('result-content').innerHTML = html;
   showScreen('s-result');
   startTimer();
 }
-
 let timerInterval = null;
-
 function startTimer() {
   let seconds = 15 * 60;
   const display = document.getElementById('timer-display');
@@ -626,13 +536,11 @@ function startTimer() {
     }
   }, 1000);
 }
-
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
-
 </body>
 </html>
