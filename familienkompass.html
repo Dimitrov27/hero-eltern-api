@@ -226,43 +226,47 @@ font-family: 'Inter', sans-serif;
 .result-bq { border-left: 2px solid var(--red); padding: 4px 0 4px 20px; margin: 10px 0; }
 .result-bq p { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.84); font-family: 'Inter', sans-serif; }
 .result-bq p strong { color: #FFFFFF !important; font-weight: 700; }
-.vip-card {
-margin-top: 16px;
-background: rgba(200,67,42,0.07);
-border: 1px solid rgba(200,67,42,0.25);
-border-radius: 4px;
-padding: 22px 22px 20px;
-}
-.vip-card-label { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; font-family: 'Manrope', sans-serif; }
-.vip-card p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.84); margin-bottom: 14px; font-family: 'Inter', sans-serif; }
-.vip-price { font-family: 'Manrope', sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.04em; color: #FFFFFF !important; margin-bottom: 4px; }
-.vip-price span { font-size: 14px; font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.6); font-weight: 400; }
-.bridge-para { margin: 28px 0 20px; font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.6); font-style: italic; text-align: center; padding: 0 8px; font-family: 'Inter', sans-serif; }
-.cta-divider {
-display: flex; align-items: center; gap: 12px; margin: 8px 0;
-color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-font-family: 'Manrope', sans-serif; font-weight: 700;
-}
-.cta-divider::before, .cta-divider::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
 .program-bridge {
 margin: 32px 0 16px; padding: 20px 22px;
 background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07);
 border-radius: 4px; font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.84);
 font-family: 'Inter', sans-serif;
 }
+/* НОВ главен CTA бутон */
 .btn-program {
 display: flex; align-items: center; justify-content: center; gap: 10px;
 background: #C8432A !important; color: #FFFFFF !important; border: none;
-padding: 18px 28px;
-font-family: 'Manrope', sans-serif; font-size: 15px; font-weight: 800;
+padding: 20px 28px;
+font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 800;
 border-radius: 12px; cursor: pointer; text-decoration: none;
 transition: all 0.2s ease; letter-spacing: -0.01em;
-box-shadow: 0 14px 28px rgba(200,67,42,0.22);
+box-shadow: 0 14px 28px rgba(200,67,42,0.28);
+width: 100%;
 }
-.btn-program:hover { background: #A93620; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,67,42,0.35); }
+.btn-program:hover { background: #A93620 !important; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,67,42,0.4); }
 .btn-program-sub { text-align: center; font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 8px; letter-spacing: 0.04em; font-family: 'Inter', sans-serif; }
+/* Котва над CTA */
+.cta-anchor {
+text-align: center; margin: 28px 0 16px;
+font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 700;
+color: rgba(255,255,255,0.9); line-height: 1.5; letter-spacing: -0.01em;
+}
+.cta-anchor em { color: var(--red); font-style: italic; }
+/* VIP минимален линк */
+.vip-link {
+text-align: center; margin-top: 20px;
+font-size: 12px; color: rgba(255,255,255,0.3);
+font-family: 'Inter', sans-serif; line-height: 1.6;
+}
+.vip-link a {
+color: rgba(255,255,255,0.4);
+text-decoration: underline;
+text-underline-offset: 3px;
+transition: color 0.2s;
+}
+.vip-link a:hover { color: rgba(255,255,255,0.7); }
 .timer-wrap {
-margin: 28px 0 0; padding: 16px 20px;
+margin: 20px 0 0; padding: 16px 20px;
 border: 1px solid rgba(200,67,42,0.3); border-radius: 4px;
 background: rgba(200,67,42,0.05); display: flex; align-items: center; gap: 14px;
 }
@@ -378,9 +382,8 @@ const RESULTS = {
     bqLines:['Du hast etwas, das viele Eltern suchen und selten finden: innere Stabilität.','Dein Alltag läuft – nicht immer perfekt, aber tragbar. Du kennst deine Grenzen, du schützt deine Energie, du bleibst meistens du selbst.','Das klingt selbstverständlich. Es ist es nicht.','<strong>Stabilität entsteht nicht durch Zufall. Sie ist das Ergebnis echter innerer Arbeit.</strong>'],
     warning:'Pass auf die „Stärke-Falle" auf. Wenn alle auf dich zählen, vergisst du leicht, selbst um Hilfe zu bitten – bis der Akku auf 5% fällt. Stabilität braucht Pflege. Nur wer selbst auftankt, kann Energie weitergeben.',
     next:'Dein Ziel ist <span class="inline-bold">Prävention</span> – diesen inneren Frieden aktiv zu schützen, bevor der Alltag ihn wieder aufbraucht.',
-    bridge:'Manchmal reicht ein kleiner Impuls, um den Kurs langfristig zu halten.',
-    ctaText:'Meinen Energy-Saver via WhatsApp erhalten',
-    trigger:'kompass fels', showVip:false
+    anchor:'Bleib der stabile Kompass, der du bereits bist.',
+    showVip:false
   },
   b: {
     archetype:'Der Jongleur', archetypeClass:'yellow', archetypeLabel:'Archetype 2 · Dein Kompass schwankt',
@@ -388,9 +391,8 @@ const RESULTS = {
     bqLines:['Du funktionierst. Aber du weißt selbst: Die Leichtigkeit fehlt.','Irgendwo zwischen Arbeit, Haushalt und den Bedürfnissen deiner Kinder bist du selbst auf der Strecke geblieben.','Nach außen sieht alles gut aus. Innen weißt du: So kann es nicht weitergehen.','<strong>Nicht, weil du schwach bist. Sondern weil Stress schneller ist als gute Vorsätze.</strong>'],
     warning:'Dauerstress macht sich unsichtbar – bis er es nicht mehr tut. Die Reizbarkeit bei kleinen Dingen, die Erschöpfung am Abend, das Gefühl nie wirklich präsent zu sein: Das sind keine Charakterfehler. Das sind Warnsignale.',
     next:'Du brauchst keine radikale Veränderung – du brauchst einen klaren Einstiegspunkt. Einen konkreten Impuls, der deinen Alltag <span class="inline-bold">entlastet</span>, bevor es zu viel wird.',
-    bridge:'Manchmal braucht man nicht mehr Wissen. Man braucht jemanden, der die Abkürzung kennt.',
-    ctaText:'Persönliche Auswertung via WhatsApp',
-    trigger:'kompass jongleur', showVip:true
+    anchor:'Stell dir den ersten Abend vor — ohne dass alles eskaliert.',
+    showVip:true
   },
   c: {
     archetype:'Die Feuerwehr', archetypeClass:'red', archetypeLabel:'Archetype 3 · Dein Kompass dreht sich im Kreis',
@@ -398,9 +400,8 @@ const RESULTS = {
     bqLines:['Dein Nervensystem ist im Überlebensmodus. Nicht weil du versagt hast – sondern weil du zu lange zu viel getragen hast.','Was du jeden Abend fühlst, wenn die Kinder schlafen – diese Mischung aus Erschöpfung und schlechtem Gewissen – ist kein Zeichen von Schwäche.','Es ist ein Signal: Dein System braucht jetzt Hilfe.','<strong>Du bist kein schlechter Elternteil. Du bist ein erschöpfter Mensch.</strong>'],
     warning:'Chronischer Stress verändert das Gehirn messbar. Der präfrontale Kortex – dein ruhiger, rationaler Teil – wird schwächer. Die Amygdala – dein Alarmsystem – übernimmt das Steuer. Du explodierst nicht, weil du es willst. Du explodierst, weil dein Nervensystem seit Monaten auf Hochtouren läuft.',
     next:'Du brauchst jetzt keinen weiteren Ratgeber. Du brauchst einen konkreten <span class="inline-bold">Reset</span> – einen ersten Schritt, der vor dem nächsten schwierigen Moment greift.',
-    bridge:'Manchmal braucht man nicht mehr Wissen. Man braucht jemanden, der die Abkürzung kennt.',
-    ctaText:'Persönliche Auswertung via WhatsApp',
-    trigger:'kompass feuerwehr', showVip:true
+    anchor:'Stell dir den ersten Abend vor — ruhig, ohne dass alles eskaliert.',
+    showVip:true
   }
 };
 let currentQ = 0, answers = [], selectedAge = null;
@@ -451,33 +452,16 @@ function showResult() {
   if (counts.c >= counts.a && counts.c >= counts.b) type = 'c';
   else if (counts.b >= counts.a) type = 'b';
   const r = RESULTS[type];
-  const waLink = `https://wa.me/${PHONE}?text=${encodeURIComponent(r.trigger)}`;
   const programLink = 'https://www.hero-eltern.de/product/22342836/eltern-reset-30-tage-programm';
   const dotHTML = answers.map(a => `<div class="score-dot ${a}"></div>`).join('');
   const bqHTML = r.bqLines.map(line => `<div class="result-bq"><p>${line}</p></div>`).join('');
-  const waIcon = `<svg style="width:18px;height:18px;flex-shrink:0;" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
 
   const vipHTML = r.showVip ? `
-    <p class="bridge-para">${r.bridge}</p>
-    <div class="vip-card">
-      <div class="vip-card-label">Eins-zu-eins Begleitung · VIP Setup</div>
-      <p>Du bekommst eine persönliche Nachricht von mir via WhatsApp – basierend auf deinem Familienkompass-Ergebnis. Ich erkläre dir, was dein Ergebnis bedeutet und wie du konkret startest. Danach begleitet dich das 30-Tage Programm.</p>
-      <p style="font-size:13px;opacity:0.8;">✓ Persönliche Auswertung deines Ergebnisses<br>✓ Individueller Startplan via WhatsApp<br>✓ 30-Tage HERO Eltern Programm inklusive</p>
-      <div class="vip-price">97 € <span>einmalig</span></div>
-      <a href="https://www.hero-eltern.de/product/22615549/hero-eltern-vip-setup" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);padding:14px 24px;border-radius:12px;font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;text-decoration:none;transition:all 0.2s ease;letter-spacing:-0.01em;">
-        VIP Setup jetzt kaufen – 97 €
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+    <div class="vip-link">
+      Möchtest du persönliche Begleitung? 
+      <a href="https://www.hero-eltern.de/product/22615549/hero-eltern-vip-setup" target="_blank" rel="noopener">Sieh dir unser VIP-Paket an →</a>
     </div>
-    <div style="text-align:center;margin-top:20px;">
-      <a href="${waLink}" target="_blank" rel="noopener" style="font-size:13px;color:rgba(255,255,255,0.4);text-decoration:underline;font-family:'Inter',sans-serif;">${waIcon} Kostenlose Auswertung anfragen</a>
-    </div>
-  ` : `
-    <p class="bridge-para">${r.bridge}</p>
-    <div class="cta-wrap" style="margin-top:12px">
-      <a href="${waLink}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 24px;border-radius:12px;background:#25D366;color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:800;text-decoration:none;letter-spacing:-0.01em;">${waIcon} ${r.ctaText}</a>
-    </div>
-  `;
+  ` : '';
 
   const html = `
     <div class="result-archetype ${r.archetypeClass}">${r.archetypeLabel}</div>
@@ -492,16 +476,15 @@ function showResult() {
     </div>
     <div class="timer-wrap" id="timer-wrap">
       <span class="timer-icon">⏱</span>
-      <div class="timer-text"><strong>Nur für dich – jetzt gerade:</strong><br>Das HERO Eltern Programm für 67 €</div>
+      <div class="timer-text"><strong>Nur für dich – jetzt gerade:</strong><br>Dein persönliches Angebot läuft ab in</div>
       <div class="timer-count" id="timer-display">15:00</div>
     </div>
-    <div class="cta-wrap" style="margin-top:16px">
-      <a href="${programLink}" class="btn-program" target="_blank" rel="noopener">
-        Meinen Reset starten – 67 €
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <div class="btn-program-sub">30 Tage · 5 Min täglich · direkt via WhatsApp · Kein Abo</div>
-    </div>
+    <div class="cta-anchor"><em>${r.anchor}</em></div>
+    <a href="${programLink}" class="btn-program" target="_blank" rel="noopener">
+      Meinen Reset starten
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <div class="btn-program-sub">30 Tage · 5 Min täglich · direkt via WhatsApp · Kein Abo</div>
     ${vipHTML}
     <div class="result-footer">
       <p>Von Eltern für Eltern · HERO Eltern ist kein therapeutisches Angebot.<br>Bei ernsthaften Anzeichen von Burnout wende dich bitte an einen Arzt oder eine Beratungsstelle.</p>
