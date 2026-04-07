@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -195,7 +194,7 @@ margin-bottom: 20px;
 font-size: 15px;
 line-height: 1.75;
 color: rgba(255,255,255,0.76);
-margin-bottom: 32px;
+margin-bottom: 28px;
 font-family: 'Inter', sans-serif;
 }
 .score-dots { display: flex; gap: 6px; margin-bottom: 28px; flex-wrap: wrap; }
@@ -203,6 +202,41 @@ font-family: 'Inter', sans-serif;
 .score-dot.a { background: #4CAF80; }
 .score-dot.b { background: #D4A84B; }
 .score-dot.c { background: #C8432A !important; }
+
+/* Was du bekommst */
+.what-you-get {
+background: rgba(255,255,255,0.03);
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 14px;
+padding: 20px;
+margin-bottom: 20px;
+}
+.what-you-get-title {
+font-family: 'Manrope', sans-serif;
+font-size: 13px;
+font-weight: 800;
+color: rgba(255,255,255,0.5);
+letter-spacing: 0.1em;
+text-transform: uppercase;
+margin-bottom: 14px;
+}
+.what-item {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+padding: 10px 0;
+border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.what-item:last-child { border-bottom: none; padding-bottom: 0; }
+.what-item-icon {
+font-size: 18px;
+flex-shrink: 0;
+line-height: 1;
+margin-top: 2px;
+}
+.what-item-text { font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.82); }
+.what-item-text strong { color: #fff; font-weight: 700; display: block; margin-bottom: 2px; }
+
 .wa-box {
 background: rgba(37,211,102,0.06);
 border: 1px solid rgba(37,211,102,0.2);
@@ -419,15 +453,41 @@ function showResult() {
     <h2 class="result-title">${r.title}</h2>
     <div class="score-dots">${dotHTML}</div>
     <p class="result-teaser">${r.teaser}</p>
+
+    <div class="what-you-get">
+      <div class="what-you-get-title">Das bekommst du – kostenlos</div>
+      <div class="what-item">
+        <div class="what-item-icon">🎧</div>
+        <div class="what-item-text">
+          <strong>Tag 1 Audio (5 Min.)</strong>
+          Warum du so reagierst – und warum das kein Charakterproblem ist.
+        </div>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">🎧</div>
+        <div class="what-item-text">
+          <strong>Tag 2 Audio (5 Min.)</strong>
+          Trigger erkennen – bevor sie dich kontrollieren.
+        </div>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">📍</div>
+        <div class="what-item-text">
+          <strong>Dein persönlicher Kompass-Bericht</strong>
+          Auf deinen Eltern-Typ zugeschnitten – direkt in WhatsApp.
+        </div>
+      </div>
+    </div>
+
     <div class="wa-box">
-      <div class="wa-box-title">Dein persönlicher Kompass-Bericht wartet.</div>
-      <div class="wa-box-sub">Kostenlos · Direkt in WhatsApp · In unter 2 Minuten</div>
+      <div class="wa-box-title">Jetzt kostenlos starten</div>
+      <div class="wa-box-sub">Direkt in WhatsApp · Kein Abo · Keine E-Mail nötig</div>
       <a href="${waLink}" class="wa-btn" target="_blank" rel="noopener">
         ${waIcon}
-        Jetzt Ergebnis in WhatsApp erhalten
+        Ergebnis + 2 Gratis-Audios erhalten
       </a>
     </div>
-    <p class="wa-micro">Kein Abo · Keine Werbung · Nur dein persönliches Ergebnis</p>
+    <p class="wa-micro">Kein Kauf nötig · Keine Kreditkarte · Direkt auf WhatsApp</p>
     <div class="result-footer">
       <p>Von Eltern für Eltern · HERO Eltern ist kein therapeutisches Angebot.<br>Bei ernsthaften Anzeichen von Burnout wende dich bitte an einen Arzt oder eine Beratungsstelle.</p>
     </div>
