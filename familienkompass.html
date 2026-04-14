@@ -197,6 +197,10 @@ color: rgba(255,255,255,0.76);
 margin-bottom: 28px;
 font-family: 'Inter', sans-serif;
 }
+.result-teaser p {
+margin-bottom: 16px;
+}
+.result-teaser p:last-child { margin-bottom: 0; }
 .score-dots { display: flex; gap: 6px; margin-bottom: 28px; flex-wrap: wrap; }
 .score-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.1); }
 .score-dot.a { background: #4CAF80; }
@@ -343,17 +347,26 @@ const RESULTS = {
   a: {
     archetype:'Der Fels in der Brandung', archetypeClass:'green', archetypeLabel:'Archetype 1 · Dein Kompass zeigt Nord',
     title:'Dein inneres Fundament ist stark. Aber auch Felsen brauchen manchmal Sonne.',
-    teaser:'Du hast eine stabile Basis – das ist selten und wertvoll. Aber auch der stärkste Fels braucht Pflege. Das HERO Eltern Programm zeigt dir, wie du diese Stärke langfristig schützt und ausbaust.'
+    teaser:`<p>Du gehörst zu den Eltern, die es meistens hinbekommen. Du reagierst ruhiger als viele andere, du trägst viel – und du tust es oft ohne zu klagen. Das ist eine echte Stärke. Aber genau hier liegt auch eine Gefahr: Felsen spüren die Erosion erst, wenn sie schon weit fortgeschritten ist.</p>
+<p>Viele Eltern deines Typs berichten, dass sie erst nach Monaten oder Jahren merken, wie viel sie tatsächlich kompensiert haben. Die kleinen Momente, in denen die Stimme doch lauter wurde. Die Abende, an denen nichts mehr ging. Die innere Leere, die sich einschleicht, obwohl von außen alles funktioniert.</p>
+<p>Das HERO Eltern Programm ist nicht nur für Eltern in der Krise. Es ist für Eltern, die ihre Stabilität nicht dem Zufall überlassen wollen. 30 Tage, täglich 5 Minuten – aufgebaut auf den gleichen neurobiologischen Grundlagen, die Spitzensportler und Führungskräfte nutzen, um unter Druck präsent zu bleiben.</p>
+<p>Nicht weil du es nötig hast. Sondern weil du es verdienst, nicht nur zu funktionieren – sondern wirklich da zu sein.</p>`
   },
   b: {
     archetype:'Der Jongleur', archetypeClass:'yellow', archetypeLabel:'Archetype 2 · Dein Kompass schwankt',
     title:'Du jonglierst. Aber deine Hände zittern schon ein bisschen.',
-    teaser:'Du funktionierst – aber die Leichtigkeit fehlt. Du trägst mehr als du zeigst. Das HERO Eltern Programm erklärt genau, was in deinem Nervensystem passiert und was als erstes hilft.'
+    teaser:`<p>Du kennst dieses Gefühl: Eigentlich läuft es. Aber es läuft auf Kante. Du schaffst es irgendwie – aber die Leichtigkeit, die du dir wünschst, ist schon lange nicht mehr da. Du reagierst öfter lauter als geplant. Du entschuldigst dich öfter als du möchtest. Und abends fragst du dich, warum es so schwer ist.</p>
+<p>Die Antwort liegt nicht in deinem Charakter. Sie liegt in deinem Nervensystem. Wenn der Tank leer ist, gibt es keinen Puffer mehr – und dann übernimmt die Biologie das Steuer. Das ist kein Versagen. Das ist Physik.</p>
+<p>Das HERO Eltern Programm wurde genau für Eltern wie dich entwickelt: Menschen, die es eigentlich können – aber die ein System brauchen, das ihnen hilft, bevor es kippt. Jeden Morgen um 7:30 Uhr bekommst du eine kurze Audioeinheit direkt auf WhatsApp. Keine langen Texte. Keine Hausaufgaben. Nur das, was in echten Krisenmomenten wirklich hilft.</p>
+<p>30 Tage. Und danach berichten die meisten Eltern nicht von einer Revolution – sondern von einer Rückkehr zu sich selbst.</p>`
   },
   c: {
     archetype:'Die Feuerwehr', archetypeClass:'red', archetypeLabel:'Archetype 3 · Dein Kompass dreht sich im Kreis',
     title:'Hör auf, Feuer zu löschen. Es ist Zeit, aus dem Rauch herauszukommen.',
-    teaser:'Dein System ist überlastet – nicht weil du versagt hast, sondern weil du zu lange zu viel getragen hast. Das HERO Eltern Programm zeigt dir den ersten konkreten Schritt heraus.'
+    teaser:`<p>Du bist im Dauereinsatz. Nicht weil du es falsch machst – sondern weil dein System schon so lange so viel trägt, dass es vergessen hat, wie sich Ruhe anfühlt. Der Morgen beginnt mit Anspannung. Der Abend endet mit Schuldgefühlen. Und dazwischen: Funktionieren, Reagieren, Weitermachen.</p>
+<p>Was in dir passiert, hat einen Namen: chronische Stressaktivierung. Dein Nervensystem ist in einem Zustand, in dem es keinen Unterschied mehr macht zwischen echter Gefahr und einem Kind, das nicht ins Bett will. Es reagiert – weil es nicht anders kann. Nicht weil du versagt hast.</p>
+<p>Das HERO Eltern Programm setzt genau dort an. Nicht mit Ratschlägen, die du im Stress sowieso nicht abrufst. Sondern mit täglicher Praxis, die direkt in dein Nervensystem arbeitet – Schicht für Schicht, über 30 Tage. Jeden Morgen 5 Minuten. Direkt auf WhatsApp. Ohne Terminkalender, ohne Gespräche, ohne dass jemand davon wissen muss.</p>
+<p>Eltern deines Typs sehen die ersten Veränderungen oft schon in der zweiten Woche. Nicht weil das Programm Wunder verspricht – sondern weil dein System schon lange auf genau diese Art von Unterstützung gewartet hat.</p>`
   }
 };
 let currentQ = 0, answers = [], selectedAge = null;
@@ -409,12 +422,12 @@ function showResult() {
     <div class="result-archetype ${r.archetypeClass}">${r.archetypeLabel}</div>
     <h2 class="result-title">${r.title}</h2>
     <div class="score-dots">${dotHTML}</div>
-    <p class="result-teaser">${r.teaser}</p>
+    <div class="result-teaser">${r.teaser}</div>
     <div class="result-cta">
       <div class="result-cta-title">Bereit für den nächsten Schritt?</div>
       <div class="result-cta-sub">30 Tage · 5 Minuten täglich · Direkt per WhatsApp</div>
       <a href="https://www.hero-eltern.de" class="result-btn">
-        Zum Programm – 37 €
+        Zum Programm →
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
