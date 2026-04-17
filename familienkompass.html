@@ -227,6 +227,20 @@ color: rgba(255,255,255,0.55);
 margin-bottom: 24px;
 line-height: 1.6;
 }
+.result-features {
+display: flex;
+justify-content: center;
+gap: 16px;
+flex-wrap: wrap;
+margin-bottom: 20px;
+font-size: 12px;
+color: rgba(255,255,255,0.55);
+}
+.result-feature::before {
+content: '✓ ';
+color: #C8432A;
+font-weight: 800;
+}
 .result-btn {
 display: inline-flex;
 align-items: center;
@@ -349,7 +363,7 @@ const RESULTS = {
     title:'Dein inneres Fundament ist stark. Aber auch Felsen brauchen manchmal Sonne.',
     teaser:`<p>Du gehörst zu den Eltern, die es meistens hinbekommen. Du reagierst ruhiger als viele andere, du trägst viel – und du tust es oft ohne zu klagen. Das ist eine echte Stärke. Aber genau hier liegt auch eine Gefahr: Felsen spüren die Erosion erst, wenn sie schon weit fortgeschritten ist.</p>
 <p>Viele Eltern deines Typs berichten, dass sie erst nach Monaten oder Jahren merken, wie viel sie tatsächlich kompensiert haben. Die kleinen Momente, in denen die Stimme doch lauter wurde. Die Abende, an denen nichts mehr ging. Die innere Leere, die sich einschleicht, obwohl von außen alles funktioniert.</p>
-<p>Das HERO Eltern Programm ist nicht nur für Eltern in der Krise. Es ist für Eltern, die ihre Stabilität nicht dem Zufall überlassen wollen. 30 Tage, täglich 5 Minuten – aufgebaut auf den gleichen neurobiologischen Grundlagen, die Spitzensportler und Führungskräfte nutzen, um unter Druck präsent zu bleiben.</p>
+<p>Die HERO30 Bibliothek ist nicht nur für Eltern in der Krise. Sie ist für Eltern, die ihre Stabilität nicht dem Zufall überlassen wollen. 30 Audio-Einheiten – alle sofort verfügbar, in deinem Tempo. Aufgebaut auf den gleichen neurobiologischen Grundlagen, die Spitzensportler und Führungskräfte nutzen, um unter Druck präsent zu bleiben.</p>
 <p>Nicht weil du es nötig hast. Sondern weil du es verdienst, nicht nur zu funktionieren – sondern wirklich da zu sein.</p>`
   },
   b: {
@@ -357,16 +371,16 @@ const RESULTS = {
     title:'Du jonglierst. Aber deine Hände zittern schon ein bisschen.',
     teaser:`<p>Du kennst dieses Gefühl: Eigentlich läuft es. Aber es läuft auf Kante. Du schaffst es irgendwie – aber die Leichtigkeit, die du dir wünschst, ist schon lange nicht mehr da. Du reagierst öfter lauter als geplant. Du entschuldigst dich öfter als du möchtest. Und abends fragst du dich, warum es so schwer ist.</p>
 <p>Die Antwort liegt nicht in deinem Charakter. Sie liegt in deinem Nervensystem. Wenn der Tank leer ist, gibt es keinen Puffer mehr – und dann übernimmt die Biologie das Steuer. Das ist kein Versagen. Das ist Physik.</p>
-<p>Das HERO Eltern Programm wurde genau für Eltern wie dich entwickelt: Menschen, die es eigentlich können – aber die ein System brauchen, das ihnen hilft, bevor es kippt. Jeden Morgen um 7:30 Uhr bekommst du eine kurze Audioeinheit direkt auf WhatsApp. Keine langen Texte. Keine Hausaufgaben. Nur das, was in echten Krisenmomenten wirklich hilft.</p>
-<p>30 Tage. Und danach berichten die meisten Eltern nicht von einer Revolution – sondern von einer Rückkehr zu sich selbst.</p>`
+<p>Die HERO30 Bibliothek wurde genau für Eltern wie dich entwickelt: Menschen, die es eigentlich können – aber die ein System brauchen, das ihnen hilft, bevor es kippt. Alle 30 Audio-Einheiten sind sofort verfügbar. Kurze Impulse, die in den echten Alltag passen – zwischen Kaffee und Kinder ins Bett bringen. Du entscheidest dein Tempo.</p>
+<p>30 Tage, 3 Monate – egal wie schnell oder langsam. Was die meisten Eltern berichten: keine Revolution, sondern eine Rückkehr zu sich selbst.</p>`
   },
   c: {
     archetype:'Die Feuerwehr', archetypeClass:'red', archetypeLabel:'Archetype 3 · Dein Kompass dreht sich im Kreis',
     title:'Hör auf, Feuer zu löschen. Es ist Zeit, aus dem Rauch herauszukommen.',
     teaser:`<p>Du bist im Dauereinsatz. Nicht weil du es falsch machst – sondern weil dein System schon so lange so viel trägt, dass es vergessen hat, wie sich Ruhe anfühlt. Der Morgen beginnt mit Anspannung. Der Abend endet mit Schuldgefühlen. Und dazwischen: Funktionieren, Reagieren, Weitermachen.</p>
 <p>Was in dir passiert, hat einen Namen: chronische Stressaktivierung. Dein Nervensystem ist in einem Zustand, in dem es keinen Unterschied mehr macht zwischen echter Gefahr und einem Kind, das nicht ins Bett will. Es reagiert – weil es nicht anders kann. Nicht weil du versagt hast.</p>
-<p>Das HERO Eltern Programm setzt genau dort an. Nicht mit Ratschlägen, die du im Stress sowieso nicht abrufst. Sondern mit täglicher Praxis, die direkt in dein Nervensystem arbeitet – Schicht für Schicht, über 30 Tage. Jeden Morgen 5 Minuten. Direkt auf WhatsApp. Ohne Terminkalender, ohne Gespräche, ohne dass jemand davon wissen muss.</p>
-<p>Eltern deines Typs sehen die ersten Veränderungen oft schon in der zweiten Woche. Nicht weil das Programm Wunder verspricht – sondern weil dein System schon lange auf genau diese Art von Unterstützung gewartet hat.</p>`
+<p>Die HERO30 Bibliothek setzt genau dort an. Nicht mit Ratschlägen, die du im Stress sowieso nicht abrufst. Sondern mit täglicher Praxis, die direkt in dein Nervensystem arbeitet – Schicht für Schicht. Alle 30 Audio-Einheiten sind sofort verfügbar: kurze Impulse, die du hörst, wenn du sie brauchst. Ohne Terminkalender, ohne Gespräche, ohne dass jemand davon wissen muss.</p>
+<p>Eltern deines Typs sehen die ersten Veränderungen oft schon in der zweiten Woche. Nicht weil die Bibliothek Wunder verspricht – sondern weil dein System schon lange auf genau diese Art von Unterstützung gewartet hat.</p>`
   }
 };
 let currentQ = 0, answers = [], selectedAge = null;
@@ -425,9 +439,15 @@ function showResult() {
     <div class="result-teaser">${r.teaser}</div>
     <div class="result-cta">
       <div class="result-cta-title">Bereit für den nächsten Schritt?</div>
-      <div class="result-cta-sub">30 Tage · 5 Minuten täglich · Direkt per WhatsApp</div>
-      <a href="https://www.hero-eltern.de" class="result-btn">
-        Zum Programm →
+      <div class="result-cta-sub">Die HERO30 Bibliothek – alle 30 Einheiten sofort verfügbar</div>
+      <div class="result-features">
+        <span class="result-feature">30 Audios</span>
+        <span class="result-feature">2 Bücher</span>
+        <span class="result-feature">30 Karten</span>
+        <span class="result-feature">Kein Abo</span>
+      </div>
+      <a href="https://www.hero-eltern.de/product/22342836/eltern-reset-30-tage-programm" class="result-btn">
+        Zur HERO30 Bibliothek — 37 €
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
