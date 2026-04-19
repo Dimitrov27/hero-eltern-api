@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Deine HERO30 Bibliothek</title>
+<title>HERO30 Bibliothek &middot; Dein 30-Tage Reset</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -35,7 +35,6 @@
     overflow-x: hidden;
   }
 
-  /* Subtle grain texture */
   body::before {
     content: '';
     position: fixed;
@@ -136,6 +135,203 @@
 
   .dot { width: 4px; height: 4px; background: var(--red); border-radius: 50%; }
 
+  /* WELCOME ONBOARDING - NEW */
+  .welcome {
+    margin: 32px 0 16px;
+    background: linear-gradient(135deg, rgba(200,67,42,0.08) 0%, rgba(200,67,42,0.02) 100%);
+    border: 1px solid rgba(200,67,42,0.2);
+    border-radius: 16px;
+    padding: 28px 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .welcome-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .welcome h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .welcome p {
+    color: var(--cream-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .welcome a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed rgba(200,67,42,0.4);
+    padding-bottom: 1px;
+  }
+
+  .welcome a:hover { color: #D4553C; }
+
+  /* VIP ACTIVATION SECTION - for VIP customers */
+  .vip-activation {
+    margin: 16px 0 32px;
+    background: linear-gradient(135deg, rgba(200,67,42,0.12) 0%, rgba(200,67,42,0.04) 100%);
+    border: 1px solid rgba(200,67,42,0.3);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vip-activation::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(200, 67, 42, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .vip-activation-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--red) 0%, var(--red-dim) 100%);
+    color: var(--cream);
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    padding: 6px 14px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(200,67,42,0.3);
+  }
+
+  .vip-activation-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .vip-activation-sub {
+    color: var(--cream-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 540px;
+    position: relative;
+  }
+
+  .vip-activation-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .vip-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(250,246,240,0.05);
+    border-radius: 10px;
+  }
+
+  .vip-step-num {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--red);
+    color: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px; font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .vip-step-text {
+    font-size: 14px;
+    color: var(--cream-dim);
+    line-height: 1.6;
+    padding-top: 4px;
+  }
+
+  .vip-step-text strong {
+    color: var(--cream);
+    font-weight: 700;
+  }
+
+  .vip-trigger-code {
+    display: inline-block;
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+    font-size: 0.95rem;
+    padding: 4px 10px;
+    background: rgba(200, 67, 42, 0.18);
+    border: 1px solid var(--red-dim);
+    border-radius: 6px;
+    color: var(--red);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 4px;
+  }
+
+  .vip-activation-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: var(--red);
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.15s, background 0.2s;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(200,67,42,0.25);
+  }
+
+  .vip-activation-btn:hover {
+    background: #D4553C;
+    transform: translateY(-1px);
+  }
+
+  .vip-wa-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .vip-activation-note {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--cream-faint);
+    line-height: 1.6;
+    position: relative;
+    font-style: italic;
+  }
+
   /* WEEK SECTION */
   .week {
     margin: 64px 0 40px;
@@ -186,6 +382,28 @@
     border-color: var(--border-hover);
   }
 
+  /* Highlight Tag 1 - first session emphasis */
+  .day.day-first {
+    border-color: rgba(200,67,42,0.35);
+    background: linear-gradient(135deg, rgba(200,67,42,0.05) 0%, var(--bg-card) 100%);
+    position: relative;
+  }
+
+  .day.day-first::before {
+    content: 'STARTE HIER';
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: var(--red);
+    color: var(--cream);
+    font-family: 'Manrope', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
   .day-head {
     display: flex;
     align-items: center;
@@ -231,144 +449,6 @@
 
   audio::-webkit-media-controls-panel {
     background: #2a231d;
-  }
-
-  /* WHATSAPP SECTION */
-  .whatsapp-section {
-    margin: 80px 0 60px;
-    padding: 48px 32px;
-    background: linear-gradient(135deg, #1A1612 0%, #221612 100%);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .whatsapp-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(200, 67, 42, 0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .ws-label {
-    font-family: 'Manrope', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--red);
-    font-weight: 700;
-    margin-bottom: 16px;
-    position: relative;
-  }
-
-  .ws-title {
-    font-family: 'Manrope', sans-serif;
-    font-size: clamp(1.6rem, 4vw, 2.1rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin-bottom: 14px;
-    position: relative;
-  }
-
-  .ws-sub {
-    color: var(--cream-dim);
-    margin-bottom: 36px;
-    max-width: 520px;
-    position: relative;
-  }
-
-  .trigger-box {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 16px;
-    position: relative;
-  }
-
-  .trigger-box:last-of-type { margin-bottom: 32px; }
-
-  .trigger-step {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Manrope', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 12px;
-  }
-
-  .trigger-step-num {
-    width: 20px; height: 20px;
-    background: var(--red);
-    color: var(--cream);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-  }
-
-  .trigger-box h3 {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .trigger-box p {
-    color: var(--cream-dim);
-    font-size: 0.95rem;
-    margin-bottom: 16px;
-  }
-
-  .trigger-code {
-    display: inline-block;
-    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
-    font-size: 0.95rem;
-    padding: 8px 14px;
-    background: rgba(200, 67, 42, 0.12);
-    border: 1px solid var(--red-dim);
-    border-radius: 6px;
-    color: var(--red);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-
-  .wa-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 28px;
-    background: var(--red);
-    color: var(--cream);
-    text-decoration: none;
-    border-radius: 10px;
-    font-family: 'Manrope', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: transform 0.15s, background 0.2s;
-    position: relative;
-  }
-
-  .wa-button:hover {
-    background: #D4553C;
-    transform: translateY(-1px);
-  }
-
-  .wa-icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
   }
 
   /* BOOKS SECTION */
@@ -446,7 +526,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 
+    box-shadow:
       0 4px 8px rgba(0,0,0,0.2),
       inset 0 1px 0 rgba(250,246,240,0.05);
   }
@@ -534,6 +614,200 @@
     flex-shrink: 0;
   }
 
+  /* VIP UPGRADE SECTION (replaces old WhatsApp section) */
+  .vip-upgrade {
+    margin: 80px 0 60px;
+    padding: 48px 32px;
+    background: linear-gradient(135deg, #1A1612 0%, #221612 100%);
+    border: 1px solid rgba(200,67,42,0.25);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vip-upgrade::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(200, 67, 42, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .vip-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--red) 0%, var(--red-dim) 100%);
+    color: var(--cream);
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    padding: 6px 14px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(200,67,42,0.3);
+  }
+
+  .vip-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    position: relative;
+  }
+
+  .vip-title em {
+    font-style: italic;
+    color: var(--red);
+  }
+
+  .vip-sub {
+    color: var(--cream-dim);
+    margin-bottom: 32px;
+    max-width: 560px;
+    position: relative;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .vip-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .vip-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(250,246,240,0.06);
+    border-radius: 10px;
+  }
+
+  .vip-feature-icon {
+    color: var(--red);
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .vip-feature-text {
+    flex: 1;
+  }
+
+  .vip-feature-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+
+  .vip-feature-desc {
+    font-size: 0.85rem;
+    color: var(--cream-dim);
+    line-height: 1.5;
+  }
+
+  .vip-pricing {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(250,246,240,0.08);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: relative;
+  }
+
+  .vip-price-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream-faint);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .vip-price-amount {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+  }
+
+  .vip-price-amount .vip-old {
+    font-size: 1rem;
+    color: var(--cream-faint);
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-left: 8px;
+  }
+
+  .vip-price-note {
+    font-size: 0.8rem;
+    color: var(--cream-faint);
+    margin-top: 4px;
+  }
+
+  .vip-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: var(--red);
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.15s, background 0.2s;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(200,67,42,0.25);
+  }
+
+  .vip-button:hover {
+    background: #D4553C;
+    transform: translateY(-1px);
+  }
+
+  .vip-note {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--cream-faint);
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .vip-note a {
+    color: var(--cream-dim);
+    border-bottom: 1px dashed rgba(250,246,240,0.3);
+    text-decoration: none;
+  }
+
+  .vip-note a:hover {
+    color: var(--red);
+    border-bottom-color: var(--red);
+  }
+
   /* FOOTER */
   footer {
     padding: 60px 24px 80px;
@@ -558,19 +832,24 @@
     .container { padding: 0 20px; }
     .day { padding: 18px 20px; }
     .day-head { gap: 12px; }
-    .whatsapp-section { padding: 36px 24px; border-radius: 16px; }
+    .vip-upgrade { padding: 36px 24px; border-radius: 16px; }
     .books-section { padding: 36px 24px; border-radius: 16px; }
-    .book-card { 
-      flex-direction: column; 
-      gap: 16px; 
+    .welcome { padding: 24px; gap: 14px; flex-direction: column; }
+    .welcome-icon { font-size: 28px; }
+    .vip-activation { padding: 24px; }
+    .vip-activation-title { font-size: 1.15rem; }
+    .book-card {
+      flex-direction: column;
+      gap: 16px;
       text-align: center;
     }
-    .book-cover { 
+    .book-cover {
       align-self: center;
       width: 70px;
       height: 90px;
     }
     .hero-meta { gap: 16px; padding: 12px 20px; font-size: 12px; }
+    .vip-pricing { flex-direction: column; align-items: flex-start; }
   }
 
   @media (min-width: 640px) {
@@ -611,13 +890,11 @@
 </style>
 </head>
 <body>
-</head>
-<body>
 
 <!-- HERO30 Password Protection - START -->
 <div id="passwordGate" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#0A0908;z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;">
   <div style="max-width:400px;width:100%;text-align:center;font-family:'DM Sans',sans-serif;">
-    
+
     <!-- Logo -->
     <div style="margin-bottom:40px;">
       <svg width="80" height="80" viewBox="0 0 100 100" style="margin-bottom:20px;">
@@ -629,25 +906,25 @@
 
     <!-- Form -->
     <div style="background:#1A1612;border:1px solid rgba(250,246,240,0.08);border-radius:16px;padding:32px 24px;">
-      <h2 style="color:#FAF6F0;font-size:20px;font-weight:600;margin-bottom:8px;">Willkommen zurück!</h2>
+      <h2 style="color:#FAF6F0;font-size:20px;font-weight:600;margin-bottom:8px;">Willkommen zur&uuml;ck!</h2>
       <p style="color:rgba(250,246,240,0.65);font-size:14px;margin-bottom:24px;line-height:1.5;">Gib dein Passwort ein um auf deine Bibliothek zuzugreifen.</p>
-      
-      <input 
-        type="password" 
-        id="passwordInput" 
+
+      <input
+        type="password"
+        id="passwordInput"
         placeholder="Dein Passwort"
         autocomplete="off"
         style="width:100%;padding:14px 16px;background:#0A0908;border:1px solid rgba(250,246,240,0.15);border-radius:10px;color:#FAF6F0;font-size:16px;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:16px;"
         onkeydown="if(event.key==='Enter')checkPassword()"
       >
-      
-      <button 
-        onclick="checkPassword()" 
+
+      <button
+        onclick="checkPassword()"
         style="width:100%;padding:14px;background:#C8432A;border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;"
       >
-        Bibliothek öffnen
+        Bibliothek &ouml;ffnen
       </button>
-      
+
       <div id="passwordError" style="color:#C8432A;font-size:13px;margin-top:12px;display:none;">
         Falsches Passwort. Bitte versuche es nochmal.
       </div>
@@ -663,7 +940,7 @@
 
 <script>
   document.body.style.overflow = 'hidden';
-  
+
   if (localStorage.getItem('hero30_auth') === 'authenticated') {
     document.getElementById('passwordGate').style.display = 'none';
     document.body.style.overflow = '';
@@ -672,12 +949,12 @@
       document.getElementById('passwordInput').focus();
     }, 100);
   }
-  
+
   function checkPassword() {
     const password = document.getElementById('passwordInput').value.trim().toLowerCase();
     const correctPassword = 'hero30-2026';
     const errorMsg = document.getElementById('passwordError');
-    
+
     if (password === correctPassword) {
       localStorage.setItem('hero30_auth', 'authenticated');
       document.getElementById('passwordGate').style.display = 'none';
@@ -692,11 +969,9 @@
 <!-- HERO30 Password Protection - END -->
 
 <div class="container">
-<div class="container">
 
   <!-- HERO -->
   <header class="hero">
-    <!-- HERO Eltern triangle logo -->
     <svg class="logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M24 6 L42 38 L6 38 Z" stroke="#C8432A" stroke-width="2" fill="none"/>
       <circle cx="24" cy="6" r="2.5" fill="#C8432A"/>
@@ -704,9 +979,9 @@
       <circle cx="6" cy="38" r="2.5" fill="#C8432A"/>
     </svg>
 
-    <div class="hero-label">HERO30 · Deine Bibliothek</div>
-    <h1>Alle 30 Tage.<br><em>Sofort verfügbar.</em></h1>
-    <p class="hero-sub">Du musst nicht 30 Tage warten. Hier findest du jede Audio-Einheit — hör sie in deinem Tempo, wiederhole, was du brauchst, überspringe nichts.</p>
+    <div class="hero-label">HERO30 &middot; Deine Bibliothek</div>
+    <h1>Alle 30 Tage.<br><em>Sofort verf&uuml;gbar.</em></h1>
+    <p class="hero-sub">Du musst nicht 30 Tage warten. Hier findest du jede Audio-Einheit &mdash; h&ouml;r sie in deinem Tempo, wiederhole, was du brauchst, &uuml;berspringe nichts.</p>
 
     <div class="hero-meta">
       <span><span class="dot"></span><strong>30</strong> Einheiten</span>
@@ -714,6 +989,45 @@
       <span><span class="dot"></span>100% deins</span>
     </div>
   </header>
+
+  <!-- WELCOME / ONBOARDING -->
+  <div class="welcome">
+    <div class="welcome-icon">👋</div>
+    <div>
+      <h2>Sch&ouml;n, dass du da bist!</h2>
+      <p>Wir empfehlen dir, mit <strong>Tag 1 &mdash; "Warum schreien wir?"</strong> zu beginnen. Die Audios bauen aufeinander auf &mdash; aber du bestimmst dein Tempo. Du kannst jederzeit zur&uuml;ck und vor.</p>
+      <a href="#tag-1">Mit Tag 1 starten &rarr;</a>
+    </div>
+  </div>
+
+  <!-- VIP ACTIVATION (visible to VIP customers - they know who they are) -->
+  <div class="vip-activation">
+    <div class="vip-activation-badge">⭐ VIP-Kunde?</div>
+    <h3 class="vip-activation-title">So aktivierst du deine WhatsApp-Begleitung</h3>
+    <p class="vip-activation-sub">Wenn du HERO30 VIP gekauft hast, aktiviere jetzt deine pers&ouml;nliche Begleitung in 2 Schritten:</p>
+
+    <div class="vip-activation-steps">
+      <div class="vip-step">
+        <div class="vip-step-num">1</div>
+        <div class="vip-step-text">
+          <strong>Schreib uns auf WhatsApp</strong> &mdash; tippe auf den Button unten. Dein WhatsApp &ouml;ffnet sich automatisch.
+        </div>
+      </div>
+      <div class="vip-step">
+        <div class="vip-step-num">2</div>
+        <div class="vip-step-text">
+          <strong>Sende das Wort:</strong> <span class="vip-trigger-code">HERO30</span> &mdash; ab dem n&auml;chsten Morgen bekommst du t&auml;glich um 07:30 Uhr deine Erinnerung.
+        </div>
+      </div>
+    </div>
+
+    <a href="https://wa.me/491757479135?text=HERO30" class="vip-activation-btn" target="_blank" rel="noopener">
+      <svg class="vip-wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A12 12 0 0012.05 0C5.5 0 .18 5.32.18 11.87c0 2.09.55 4.13 1.6 5.93L0 24l6.37-1.66a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.87-5.32 11.87-11.87 0-3.17-1.23-6.15-3.41-8.43zM12.06 21.77h-.01a9.9 9.9 0 01-5.03-1.37l-.36-.22-3.77.98 1.01-3.67-.24-.38a9.87 9.87 0 01-1.51-5.24c0-5.45 4.44-9.89 9.9-9.89 2.65 0 5.14 1.03 7 2.9a9.82 9.82 0 012.9 6.99c0 5.45-4.43 9.9-9.89 9.9zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48a8.98 8.98 0 01-1.66-2.06c-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+      WhatsApp &ouml;ffnen &amp; HERO30 senden
+    </a>
+
+    <p class="vip-activation-note">Du erh&auml;ltst au&szlig;erdem eine pers&ouml;nliche Kompass-Auswertung und einen individuellen Aktionsplan. Wir melden uns innerhalb von 48 Stunden bei dir.</p>
+  </div>
 
   <!-- WOCHE 1 -->
   <section class="week">
@@ -723,7 +1037,7 @@
     </div>
     <div class="day-grid">
 
-      <div class="day">
+      <div class="day day-first" id="tag-1">
         <div class="day-head">
           <div class="day-icon">🧠</div>
           <div>
@@ -733,7 +1047,7 @@
         </div>
         <audio controls preload="none">
           <source src="https://pub-b302f8e0a6ea45b78db4482168c05c50.r2.dev/Audio%20/Tag%2001.mp3" type="audio/mpeg">
-          Dein Browser unterstützt kein Audio.
+          Dein Browser unterst&uuml;tzt kein Audio.
         </audio>
       </div>
 
@@ -755,7 +1069,7 @@
           <div class="day-icon">🤍</div>
           <div>
             <div class="day-label">Tag 3</div>
-            <div class="day-title">Schuld &amp; Selbstmitgefühl</div>
+            <div class="day-title">Schuld &amp; Selbstmitgef&uuml;hl</div>
           </div>
         </div>
         <audio controls preload="none">
@@ -831,7 +1145,7 @@
           <div class="day-icon">🌅</div>
           <div>
             <div class="day-label">Tag 8</div>
-            <div class="day-title">Rituale für Ruhe</div>
+            <div class="day-title">Rituale f&uuml;r Ruhe</div>
           </div>
         </div>
         <audio controls preload="none"><source src="https://pub-b302f8e0a6ea45b78db4482168c05c50.r2.dev/Audio%20/Tag%208.mp3" type="audio/mpeg"></audio>
@@ -842,7 +1156,7 @@
           <div class="day-icon">🌄</div>
           <div>
             <div class="day-label">Tag 9</div>
-            <div class="day-title">Morgenroutine für Ruhe</div>
+            <div class="day-title">Morgenroutine f&uuml;r Ruhe</div>
           </div>
         </div>
         <audio controls preload="none"><source src="https://pub-b302f8e0a6ea45b78db4482168c05c50.r2.dev/Audio%20/Tag%209.mp3" type="audio/mpeg"></audio>
@@ -886,7 +1200,7 @@
           <div class="day-icon">🚪</div>
           <div>
             <div class="day-label">Tag 13</div>
-            <div class="day-title">Türschwellen-Reset</div>
+            <div class="day-title">T&uuml;rschwellen-Reset</div>
           </div>
         </div>
         <audio controls preload="none"><source src="https://pub-b302f8e0a6ea45b78db4482168c05c50.r2.dev/Audio%20/Tag%2013.mp3" type="audio/mpeg"></audio>
@@ -1040,7 +1354,7 @@
           <div class="day-icon">🔄</div>
           <div>
             <div class="day-label">Tag 25</div>
-            <div class="day-title">Rückschritte gehören zum Weg</div>
+            <div class="day-title">R&uuml;ckschritte geh&ouml;ren zum Weg</div>
           </div>
         </div>
         <audio controls preload="none"><source src="https://pub-b302f8e0a6ea45b78db4482168c05c50.r2.dev/Audio%20/Tag%2025.mp3" type="audio/mpeg"></audio>
@@ -1073,7 +1387,7 @@
           <div class="day-icon">🧭</div>
           <div>
             <div class="day-label">Tag 28</div>
-            <div class="day-title">Dein persönlicher Kompass</div>
+            <div class="day-title">Dein pers&ouml;nlicher Kompass</div>
           </div>
         </div>
         <audio controls preload="none"><source src="https://pub-b302f8e0a6ea45b78db4482168c05c50.r2.dev/Audio%20/Tag%2028.mp3" type="audio/mpeg"></audio>
@@ -1107,9 +1421,9 @@
   <!-- BONUS BÜCHER -->
   <section class="books-section">
     <div class="books-header">
-      <div class="books-label">Bonus · Inklusive</div>
+      <div class="books-label">Bonus &middot; Inklusive</div>
       <div class="books-title">Deine Bonus-Inhalte</div>
-      <p class="books-sub">Zwei komplette Ratgeber plus 30 Reflexionskarten — alles digital verfügbar.</p>
+      <p class="books-sub">Zwei komplette Ratgeber plus 30 Reflexionskarten &mdash; alles digital verf&uuml;gbar.</p>
     </div>
 
     <div class="books-grid">
@@ -1120,7 +1434,7 @@
         </div>
         <div class="book-content">
           <h3 class="book-title">SOS-Eltern Buch</h3>
-          <p class="book-desc">Der Eltern-Notfallguide für schwierige Momente — praktisch und sofort umsetzbar.</p>
+          <p class="book-desc">Der Eltern-Notfallguide f&uuml;r schwierige Momente &mdash; praktisch und sofort umsetzbar.</p>
           <div class="book-buttons">
             <a href="https://hero-eltern-api.pages.dev/SOS_Eltern_.pdf" class="book-btn book-btn-primary" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
@@ -1141,7 +1455,7 @@
         </div>
         <div class="book-content">
           <h3 class="book-title">Der Weg nach Innen</h3>
-          <p class="book-desc">Innere Ruhe finden als Eltern — von Stress zu Gelassenheit in kleinen Schritten.</p>
+          <p class="book-desc">Innere Ruhe finden als Eltern &mdash; von Stress zu Gelassenheit in kleinen Schritten.</p>
           <div class="book-buttons">
             <a href="https://hero-eltern-api.pages.dev/Der_Weg_nach_Innen.pdf" class="book-btn book-btn-primary" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
@@ -1162,7 +1476,7 @@
         </div>
         <div class="book-content">
           <h3 class="book-title">30-Tage-Karten</h3>
-          <p class="book-desc">30 Reflexionskarten — eine für jeden Tag deines Reset-Programms.</p>
+          <p class="book-desc">30 Reflexionskarten &mdash; eine f&uuml;r jeden Tag deines Reset-Programms.</p>
           <div class="book-buttons">
             <a href="https://hero-eltern-api.pages.dev/HERO_30Tage_Flashcards.pdf" class="book-btn book-btn-primary" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
@@ -1174,46 +1488,65 @@
     </div>
   </section>
 
-  <!-- WHATSAPP PROGRAMM -->
-  <section class="whatsapp-section">
-    <div class="ws-label">Optional · WhatsApp-Begleitung</div>
-    <h2 class="ws-title">Willst du auch die tägliche Erinnerung?</h2>
-    <p class="ws-sub">Du hast schon alles hier. Aber viele Eltern sagen: Die kleine Nachricht am Morgen macht den Unterschied — weil sie dran erinnert, ohne dass du selbst dran denken musst.</p>
+  <!-- VIP UPGRADE - replaces old free WhatsApp section -->
+  <section class="vip-upgrade">
+    <div class="vip-badge">⭐ Upgrade auf VIP</div>
+    <h2 class="vip-title">Willst du <em>pers&ouml;nliche Begleitung</em><br>auf deinem Weg?</h2>
+    <p class="vip-sub">Du hast schon alles hier &mdash; aber manchmal braucht es mehr als Audios. Mit dem HERO30 VIP-Upgrade bekommst du t&auml;gliche WhatsApp-Erinnerungen, eine pers&ouml;nliche Auswertung deiner Familie und direkten Support, wenn du Fragen hast.</p>
 
-    <div class="trigger-box">
-      <div class="trigger-step">
-        <span class="trigger-step-num">1</span>
-        Schritt 1 — Chat öffnen
+    <div class="vip-features">
+      <div class="vip-feature">
+        <div class="vip-feature-icon">✓</div>
+        <div class="vip-feature-text">
+          <div class="vip-feature-title">T&auml;gliche WhatsApp-Begleitung &mdash; 30 Tage</div>
+          <div class="vip-feature-desc">Sanfte Morgen-Erinnerung um 07:30 Uhr, damit du dranbleibst.</div>
+        </div>
       </div>
-      <h3>Schreib uns auf WhatsApp</h3>
-      <p>Tippe auf den Button unten. Dein WhatsApp öffnet sich automatisch mit unserer Nummer.</p>
+      <div class="vip-feature">
+        <div class="vip-feature-icon">✓</div>
+        <div class="vip-feature-text">
+          <div class="vip-feature-title">Pers&ouml;nliche Kompass-Auswertung</div>
+          <div class="vip-feature-desc">Ich analysiere dein Familienkompass-Ergebnis und erkl&auml;re dir pers&ouml;nlich, was es bedeutet.</div>
+        </div>
+      </div>
+      <div class="vip-feature">
+        <div class="vip-feature-icon">✓</div>
+        <div class="vip-feature-text">
+          <div class="vip-feature-title">Individueller Aktionsplan</div>
+          <div class="vip-feature-desc">Speziell f&uuml;r deine Situation &mdash; kein Copy-Paste.</div>
+        </div>
+      </div>
+      <div class="vip-feature">
+        <div class="vip-feature-icon">✓</div>
+        <div class="vip-feature-text">
+          <div class="vip-feature-title">WhatsApp-Support, Antwort in 24h</div>
+          <div class="vip-feature-desc">Du schreibst &mdash; ich antworte pers&ouml;nlich. Nicht automatisiert.</div>
+        </div>
+      </div>
     </div>
 
-    <div class="trigger-box">
-      <div class="trigger-step">
-        <span class="trigger-step-num">2</span>
-        Schritt 2 — Trigger senden
+    <div class="vip-pricing">
+      <div>
+        <div class="vip-price-label">VIP-Upgrade Preis</div>
+        <div class="vip-price-amount">57 &euro;<span class="vip-old">97 &euro;</span></div>
+        <div class="vip-price-note">Einmalig &middot; Kein Abo</div>
       </div>
-      <h3>Sende genau dieses Wort:</h3>
-      <p>Kopiere oder tippe im Chat:</p>
-      <div class="trigger-code">HERO30</div>
-      <p style="margin-top:14px; font-size: 0.9rem; color: var(--cream-faint);">Du bekommst automatisch jeden Morgen deine heutige Einheit + eine kleine Reflexionsfrage.</p>
+      <a href="https://www.hero-eltern.de/product/22615549/hero-eltern-vip-setup" class="vip-button" target="_blank" rel="noopener">
+        ⭐ Jetzt VIP-Upgrade holen
+      </a>
     </div>
 
-    <a href="https://wa.me/491757479135?text=HERO30" class="wa-button" target="_blank" rel="noopener">
-      <svg class="wa-icon" viewBox="0 0 24 24"><path d="M20.52 3.48A12 12 0 0012.05 0C5.5 0 .18 5.32.18 11.87c0 2.09.55 4.13 1.6 5.93L0 24l6.37-1.66a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.87-5.32 11.87-11.87 0-3.17-1.23-6.15-3.41-8.43zM12.06 21.77h-.01a9.9 9.9 0 01-5.03-1.37l-.36-.22-3.77.98 1.01-3.67-.24-.38a9.87 9.87 0 01-1.51-5.24c0-5.45 4.44-9.89 9.9-9.89 2.65 0 5.14 1.03 7 2.9a9.82 9.82 0 012.9 6.99c0 5.45-4.43 9.9-9.89 9.9zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48a8.98 8.98 0 01-1.66-2.06c-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
-      Jetzt WhatsApp-Begleitung starten
-    </a>
+    <p class="vip-note">Bereits Bibliothek-Kunde? Schreib uns an <a href="mailto:info@hero-eltern.de">info@hero-eltern.de</a> &mdash; wir rechnen dir die 20 &euro; Differenz an.</p>
   </section>
 
 </div>
 
 <footer>
-  <div>HERO Eltern · <a href="https://hero-eltern.de">hero-eltern.de</a></div>
+  <div>HERO Eltern &middot; <a href="https://hero-eltern.de">hero-eltern.de</a></div>
   <div style="margin-top: 8px;">
     <a href="https://hero-eltern.de/impressum">Impressum</a>
-    <a href="https://hero-eltern.de/datenschutz">Datenschutz</a>
-    <a href="mailto:hallo@hero-eltern.de">Kontakt</a>
+    <a href="https://hero-eltern.de/datenschutzerklaerung">Datenschutz</a>
+    <a href="mailto:info@hero-eltern.de">Kontakt</a>
   </div>
 </footer>
 
