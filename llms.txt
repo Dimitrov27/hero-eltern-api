@@ -3,21 +3,22 @@
 
 ## Seiten
 - [Startseite](https://www.hero-eltern.de/): HERO Eltern - 30-Tage Reset per WhatsApp
-- [SOS-Reset](https://www.hero-eltern.de/sos-reset): Kostenloser KI-gestuetzter SOS-Reset fuer akute Stressmomente
-- [Familienkompass](https://www.hero-eltern.de/familienkompass): Kostenloser Selbsttest - Welcher Elterntyp bist du?
-- [Programme](https://www.hero-eltern.de/programme): Eltern-Reset Standard (67 EUR) und VIP (97 EUR)
-- [Ueber mich](https://www.hero-eltern.de/ueber-mich): Guenther Sommer - Eltern-Begleiter und Gruender von HERO Eltern
+- [SOS-Reset](https://www.hero-eltern.de/sos-reset/): Kostenloser KI-gestuetzter SOS-Reset fuer akute Stressmomente
+- [Familienkompass](https://www.hero-eltern.de/familienkompass/): Kostenloser Selbsttest - Welcher Elterntyp bist du?
+- [Programme](https://www.hero-eltern.de/programme/): HERO30 Bibliothek (37€) und VIP (57€)
+- [Ueber mich](https://www.hero-eltern.de/ueber-mich/): Günter Sommer - Eltern-Begleiter und Gruender von HERO Eltern
 - [YouTube](https://www.youtube.com/@heroeltern): HERO Eltern Video-Kanal – Impulse fuer Eltern
 
 ## Blog
-- [Kind hoert nicht zu](https://www.hero-eltern.de/kind-hoert-nicht-zu): Warum Kinder nicht zuhoeren und 4 Schritte die helfen
-- [Kind angeschrien](https://www.hero-eltern.de/kind-anschreien-was-tun): Was nach einer Eskalation zu tun ist
-- [Bildschirm-Konflikt](https://www.hero-eltern.de/bildschirm-schreien-was-tun): Warum Eltern beim Thema Bildschirmzeit eskalieren
-- [Geschwister](https://www.hero-eltern.de/geschwisterkind-immer-erster): Wenn das kleine Kind immer zuerst sein will
-- [Innerer Kompass](https://www.hero-eltern.de/eltern-als-vorbild-der-innere-kompass): Eltern als stabiler Orientierungspunkt fuer ihre Kinder
+- [Warum Eltern explodieren](https://www.hero-eltern.de/blog/warum-eltern-explodieren-und-was-im-nervensystem-passiert/): Was im Nervensystem passiert wenn Eltern die Kontrolle verlieren
+- [Kind hoert nicht zu](https://www.hero-eltern.de/blog/kind-hoert-nicht-zu/): Warum Kinder nicht zuhoeren und 4 Schritte die helfen
+- [Kind angeschrien](https://www.hero-eltern.de/blog/kind-anschreien-was-tun/): Was nach einer Eskalation zu tun ist
+- [Bildschirm-Konflikt](https://www.hero-eltern.de/blog/bildschirm-schreien-was-tun/): Warum Eltern beim Thema Bildschirmzeit eskalieren
+- [Geschwister](https://www.hero-eltern.de/blog/geschwisterkind-immer-erster/): Wenn das kleine Kind immer zuerst sein will
+- [Innerer Kompass](https://www.hero-eltern.de/blog/eltern-als-vorbild-der-innere-kompass/): Eltern als stabiler Orientierungspunkt fuer ihre Kinder
 
 ## Ueber
-- Autor: Guenther Sommer
+- Autor: Günter Sommer
 - Themen: Elterliche Selbstregulierung, Nervensystem-Training, Polyvagaltheorie, Familienalltag, Stressbewaeltigung
 - Sprache: Deutsch
 - Zielgruppe: Eltern mit Kindern im Alter von 2-12 Jahren
