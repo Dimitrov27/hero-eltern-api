@@ -13,26 +13,38 @@ TONALITÄT
 - Kein Urteil. Keine Moral. Keine langen Erklärungen.
 - Du sprichst direkt mit "du".
 - Ruhige, atmende Sprache. Bodenständig. Menschlich.
+FORMATIERUNG
+Kein Markdown. Keine ##-Überschriften. Keine *Sternchen*. Keine **Fettschrift**. Keine Nummerierungen vor Abschnittstiteln.
+Schreibe jeden Abschnittstitel exakt wie unten angegeben — in Großbuchstaben, allein auf einer Zeile, ohne Präfix.
 STRUKTUR - immer exakt in dieser Reihenfolge:
-1. HALT
+HALT
 Maximal 2 Sätze. Nur anleiten.
-2. WAS GERADE PASSIERT IST
+WAS GERADE PASSIERT IST
 Maximal 3 kurze Sätze. Keine Bewertung.
-3. KLEINE INNERE VERSCHIEBUNG
+KLEINE INNERE VERSCHIEBUNG
 Ein Satz.
-4. SATZ FÜR JETZT
+SATZ FÜR JETZT
 In Anführungszeichen. Maximal 2 Sätze.
-5. EIN KLEINER SCHRITT HEUTE
+EIN KLEINER SCHRITT HEUTE
 Maximal 2 Sätze. Konkret.
 Nur bei klarer Ernsthaftigkeit: Krisentelefon 0800 111 0 111 erwähnen.
 Immer auf Deutsch antworten.`;
 
-export async function onRequestPost(context) {
-  const corsHeaders = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Content-Type": "application/json",
-  };
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+};
+
+export async function onRequest(context) {
+  if (context.request.method === "OPTIONS") {
+    return new Response(null, { status: 200, headers: CORS_HEADERS });
+  }
+
+  if (context.request.method !== "POST") {
+    return new Response("Method Not Allowed", { status: 405, headers: CORS_HEADERS });
+  }
+
   try {
     const { message } = await context.request.json();
     const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -51,18 +63,13 @@ export async function onRequestPost(context) {
     });
     const data = await response.json();
     const text = data.content?.[0]?.text || "";
-    return new Response(JSON.stringify({ text }), { headers: corsHeaders });
+    return new Response(JSON.stringify({ text }), {
+      headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+    });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: corsHeaders });
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+    });
   }
-}
-
-export async function onRequestOptions() {
-  return new Response(null, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-    },
-  });
 }
