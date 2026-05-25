@@ -432,12 +432,22 @@ function showResult() {
   else if (counts.b >= counts.a) type = 'b';
   const r = RESULTS[type];
   const dotHTML = answers.map(a => `<div class="score-dot ${a}"></div>`).join('');
-  const html = `
-    <div class="result-archetype ${r.archetypeClass}">${r.archetypeLabel}</div>
-    <h2 class="result-title">${r.title}</h2>
-    <div class="score-dots">${dotHTML}</div>
-    <div class="result-teaser">${r.teaser}</div>
-    <div class="result-cta">
+  const ctaHTML = type === 'c'
+    ? `<div class="result-cta">
+      <div class="result-cta-title">Bereit für den nächsten Schritt?</div>
+      <div class="result-cta-sub">Das HERO30 VIP-Programm – Bibliothek + 30 Tage persönliches Coaching</div>
+      <div class="result-features">
+        <span class="result-feature">30 Audios</span>
+        <span class="result-feature">2 Bücher</span>
+        <span class="result-feature">30 Karten</span>
+        <span class="result-feature">WhatsApp-Coaching</span>
+      </div>
+      <a href="https://www.hero-eltern.de/programme#vip" class="result-btn" target="_top">
+        Zum VIP-Programm — 57 €
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>`
+    : `<div class="result-cta">
       <div class="result-cta-title">Bereit für den nächsten Schritt?</div>
       <div class="result-cta-sub">Die HERO30 Bibliothek – alle 30 Einheiten sofort verfügbar</div>
       <div class="result-features">
@@ -450,7 +460,13 @@ function showResult() {
         Zur HERO30 Bibliothek — 37 €
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
-    </div>
+    </div>`;
+  const html = `
+    <div class="result-archetype ${r.archetypeClass}">${r.archetypeLabel}</div>
+    <h2 class="result-title">${r.title}</h2>
+    <div class="score-dots">${dotHTML}</div>
+    <div class="result-teaser">${r.teaser}</div>
+    ${ctaHTML}
     <div class="result-footer">
       <p>Von Eltern für Eltern · HERO Eltern ist kein therapeutisches Angebot.<br>Bei ernsthaften Anzeichen von Burnout wende dich bitte an einen Arzt oder eine Beratungsstelle.</p>
     </div>

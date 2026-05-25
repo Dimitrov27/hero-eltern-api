@@ -32,7 +32,7 @@
     document.getElementById("sos-error").style.display = "none";
 
     try {
-     const res = await fetch("https://hero-eltern-api.pages.dev/sos", {        method: "POST",
+     const res = await fetch("https://hero-sos.dimitrov27.workers.dev", {        method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
       });
@@ -62,7 +62,7 @@
 
       document.getElementById("sos-loading").style.display = "none";
       document.getElementById("sos-result").style.display = "block";
-      document.getElementById("sos-result").scrollIntoView({ behavior: "smooth" });
+      document.getElementById("sos-result").scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 
     } catch (e) {
       document.getElementById("sos-loading").style.display = "none";
